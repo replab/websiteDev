@@ -48,5 +48,5 @@ jobs:
         with:
           directory: docs
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh_pages
+          branch: gh-pages
 
