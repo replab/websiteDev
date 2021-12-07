@@ -33,7 +33,7 @@
     <script src="../_static/js/collapse_helper.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Symmetric SDPs" href="SDP.html" />
+    <link rel="next" title="Averaging a matrix over a continuous group" href="averageMatrix.html" />
     <link rel="prev" title="Sampling the commutant of a representation" href="sampleCommutant.html" /> 
   
    
@@ -74,7 +74,7 @@
           <a href="../mat-modindex.html" title="MATLAB Module Index"
              >matlab index</a> |</li>
         <li class="right" >
-          <a href="SDP.html" title="Symmetric SDPs"
+          <a href="averageMatrix.html" title="Averaging a matrix over a continuous group"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="sampleCommutant.html" title="Sampling the commutant of a representation"
@@ -108,18 +108,23 @@
 <li class="toctree-l2"><a class="reference internal" href="groupFromGenerators.html">How to define a group from generators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vectorStabilizerGroup.html">How to define the group which leave a vector invariant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="graphAutomorphisms.html">How to compute the automorphism group of a graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="groupOrder.html">How to compute the order of a group</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intersection.html">How to compute the intersection of two groups</a></li>
 <li class="toctree-l2"><a class="reference internal" href="naturalRep.html">How to compute the natural representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousGroup.html">How to define a continuous group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="definingRep.html">How to compute the defining representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abstractGroup.html">How to define an abstract group</a></li>
 <li class="toctree-l2"><a class="reference internal" href="decomposeRep.html">How to decompose a representation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sampleAlgebra.html">How to sample the group algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sampleCommutant.html">How to sample the commutant algebra</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">How to symmetrize a matrix</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Preparation">Preparation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Definition-of-the-matrix-to-symmetrize">Definition of the matrix to symmetrize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Definition-of-the-group">Definition of the group</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Averaging">Averaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Matrix-to-be-symmetrized">Matrix to be symmetrized</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Group-definition">Group definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Averaging-over-the-group">Averaging over the group</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="averageMatrix.html">How to average a matrix over a compact group</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SDP.html">How to define a semi-definite variable (SDP) that respects some symmetries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loadSave.html">How to load/save RepLAB objects</a></li>
 </ul>
@@ -439,8 +444,8 @@ replab_init: Initialization done.
 </pre></div></div>
 </div>
 </section>
-<section id="Definition-of-the-matrix-to-symmetrize">
-<h2>Definition of the matrix to symmetrize<a class="headerlink" href="#Definition-of-the-matrix-to-symmetrize" title="Permalink to this headline">¶</a></h2>
+<section id="Matrix-to-be-symmetrized">
+<h2>Matrix to be symmetrized<a class="headerlink" href="#Matrix-to-be-symmetrized" title="Permalink to this headline">¶</a></h2>
 <p>Let us consider a random matrix</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -458,18 +463,18 @@ replab_init: Initialization done.
 <div class="highlight"><pre>
 M =
 
-   0.697380   0.999097   0.332613   0.692345   0.380676
-   0.274510   0.140521   0.013084   0.398878   0.704344
-   0.480858   0.901229   0.431076   0.046454   0.054431
-   0.206657   0.480423   0.560119   0.354455   0.277955
-   0.022384   0.534448   0.012327   0.313384   0.302097
+   6.0441e-01   6.8711e-01   8.9144e-01   9.9683e-01   3.7809e-01
+   5.9479e-01   6.9042e-01   7.7816e-01   2.6821e-01   1.7023e-02
+   3.6010e-01   6.8121e-01   2.4051e-01   4.8751e-01   1.0806e-01
+   8.9813e-03   5.0507e-01   5.1180e-02   6.5778e-01   7.8339e-01
+   1.7332e-02   9.7505e-01   1.3946e-01   1.7779e-01   3.3472e-01
 
 </pre></div></div>
 </div>
 <p>Our aim is to compute the average <span class="math notranslate nohighlight">\(\sum_{g\in G} M(g,g)\)</span> over a group <span class="math notranslate nohighlight">\(G\)</span>, where the group elements <span class="math notranslate nohighlight">\(g\)</span> act on the rows and on the columns of our matrix.</p>
 </section>
-<section id="Definition-of-the-group">
-<h2>Definition of the group<a class="headerlink" href="#Definition-of-the-group" title="Permalink to this headline">¶</a></h2>
+<section id="Group-definition">
+<h2>Group definition<a class="headerlink" href="#Group-definition" title="Permalink to this headline">¶</a></h2>
 <p>Let us consider the permutation group over which we wish to perform the average</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -496,8 +501,8 @@ generator(1 or &#39;x1&#39;): [2, 1, 4, 5, 3]
 </pre></div></div>
 </div>
 </section>
-<section id="Averaging">
-<h2>Averaging<a class="headerlink" href="#Averaging" title="Permalink to this headline">¶</a></h2>
+<section id="Averaging-over-the-group">
+<h2>Averaging over the group<a class="headerlink" href="#Averaging-over-the-group" title="Permalink to this headline">¶</a></h2>
 <p>The averaging is done by projecting our matrix onto the commutant of the group’s natural representation</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -525,11 +530,11 @@ generator(1 or &#39;x1&#39;): [2, 1, 4, 5, 3]
 <div class="highlight"><pre>
 MP =
 
-   0.4190   0.6368   0.4203   0.4203   0.4203
-   0.6368   0.4190   0.4203   0.4203   0.4203
-   0.4377   0.4377   0.3625   0.1122   0.3093
-   0.4377   0.4377   0.3093   0.3625   0.1122
-   0.4377   0.4377   0.1122   0.3093   0.3625
+   0.6474   0.6409   0.5550   0.5550   0.5550
+   0.6409   0.6474   0.5550   0.5550   0.5550
+   0.4246   0.4246   0.4110   0.4701   0.1123
+   0.4246   0.4246   0.1123   0.4110   0.4701
+   0.4246   0.4246   0.4701   0.1123   0.4110
 
 </pre></div></div>
 </div>
@@ -551,15 +556,15 @@ MP =
 <div class="highlight"><pre>
 el =
 
-   1   2   4   5   3
+   1   2   3   4   5
 
 ans =
 
-   0.4190   0.6368   0.4203   0.4203   0.4203
-   0.6368   0.4190   0.4203   0.4203   0.4203
-   0.4377   0.4377   0.3625   0.1122   0.3093
-   0.4377   0.4377   0.3093   0.3625   0.1122
-   0.4377   0.4377   0.1122   0.3093   0.3625
+   0.6474   0.6409   0.5550   0.5550   0.5550
+   0.6409   0.6474   0.5550   0.5550   0.5550
+   0.4246   0.4246   0.4110   0.4701   0.1123
+   0.4246   0.4246   0.1123   0.4110   0.4701
+   0.4246   0.4246   0.4701   0.1123   0.4110
 
 </pre></div></div>
 </div>
@@ -579,7 +584,7 @@ ans =
       </div>
     
       <div class="pull-right">
-        <a class="btn btn-default" href="SDP.html" title="next chapter (use the right arrow)">Symmetric SDPs</a>
+        <a class="btn btn-default" href="averageMatrix.html" title="next chapter (use the right arrow)">Averaging a matrix over a continuous group</a>
       </div>
     </div>
     <div class="clearer"></div>
@@ -597,7 +602,7 @@ ans =
           <a href="../mat-modindex.html" title="MATLAB Module Index"
              >matlab index</a> |</li>
         <li class="right" >
-          <a href="SDP.html" title="Symmetric SDPs"
+          <a href="averageMatrix.html" title="Averaging a matrix over a continuous group"
              >next</a> |</li>
         <li class="right" >
           <a href="sampleCommutant.html" title="Sampling the commutant of a representation"

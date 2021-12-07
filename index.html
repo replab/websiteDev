@@ -166,8 +166,8 @@ They have everything to get you started, from installation instructions to hands
 <p>The documentation of <strong>RepLAB</strong> is organized along 4 directions, following this <a class="reference external" href="https://www.divio.com/blog/documentation/">approach</a>:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="tutorials/index.html"><span class="doc">Tutorials</span></a>: are short hands-on presentations that give you a taste of the goodness of <strong>RepLAB</strong></p></li>
-<li><p><a class="reference internal" href="howto/index.html"><span class="doc">How-to guides</span></a>: are concise recipes that show you how to achieve a specific goal</p></li>
-<li><p><a class="reference internal" href="topic/index.html"><span class="doc">Topic guides</span></a>: are understanding-oriented presentations that explain the big picture and the key notions on which this software is built</p></li>
+<li><p><a class="reference internal" href="howto/index.html"><span class="doc">How-to guides</span></a>: are concise recipes showing how to achieve a specific goal</p></li>
+<li><p><a class="reference internal" href="topic/index.html"><span class="doc">Topic guides</span></a>: are understanding-oriented presentations explaining the big picture and key notions on which this software is built</p></li>
 <li><p><a class="reference internal" href="api/index.html"><span class="doc">Technical reference</span></a>: contains a complete and accurate description of each object of the library</p></li>
 </ul>
 </section>
@@ -178,13 +178,13 @@ They have everything to get you started, from installation instructions to hands
 <li><p>RepLAB works in double floating-point precision.</p></li>
 <li><p>We are still working on the estimation/control of numerical errors (a few criteria are currently hard-coded).
 That said, <strong>RepLAB</strong> works fine for representations of medium size (<span class="math notranslate nohighlight">\(d\)</span> equal to a few thousands).</p></li>
-<li><p>While RepLAB has implementations of several computational group theory algorithms, their performance is not competitive with dedicated computational group theory software such as GAP or Magma.</p></li>
+<li><p>While RepLAB implements several computational group theory algorithms, their performance is not competitive with dedicated computational group theory software such as GAP or Magma.</p></li>
 <li><p>The documentation is still a work in progress, and tutorials/how to guides/… will be added as the project progresses.</p></li>
 </ul>
 </section>
 <section id="why-replab">
 <h2>Why RepLAB?<a class="headerlink" href="#why-replab" title="Permalink to this headline">¶</a></h2>
-<p>Because no open source library exists to decomposes arbitrary permutation/monomial representations into irreducible representations over the reals. RepLAB implements numerical methods that perform this decomposition up to machine precision.</p>
+<p>Because no open source library decomposes arbitrary permutation/monomial representations into irreducible representations over the reals. <strong>RepLAB</strong> implements numerical methods that perform this decomposition up to machine precision.</p>
 <p>That said, other libraries working on the same problem space include:</p>
 <ul class="simple">
 <li><p>The <a class="reference external" href="https://gap-packages.github.io/RepnDecomp">GAP System 4 package RepnDecomp</a> by
@@ -193,19 +193,21 @@ Kaashif Hymabaccus.</p></li>
 Sebastian Egner and Markus Püschel.</p></li>
 <li><p><a class="reference external" href="http://ncsostools.fis.unm.si/documentation/awbd">NCSOStools</a> includes an implementation of the Murota-Kanno-Kojima-Kojima-Maehara algorithm to decompose matrix *-algebras.</p></li>
 </ul>
+<p>Additional features unique to <strong>RepLAB</strong>:</p>
+<ul class="simple">
+<li><p><strong>RepLAB</strong> follows a category-based approach. This allows preserving the structure of objects under composition</p></li>
+<li><p><strong>RepLAB</strong> integrates with a convex optimization framework, hence</p></li>
+</ul>
 </section>
 <section id="contributors">
 <h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
-<p>RepLAB and the group theory/linear algebra libraries it depends on were
-initiated by <a class="reference external" href="https://github.com/denisrosset">Denis Rosset</a> and
-<a class="reference external" href="https://github.com/jdbancal">Jean-Daniel Bancal</a>. The project has
-now more <a class="reference external" href="https://github.com/replab/replab/graphs/contributors">contributors</a>.</p>
-<p>RepLAB references in the <code class="docutils literal notranslate"><span class="pre">/external</span></code> directory the following libraries: the <a class="reference external" href="https://github.com/MOxUnit/MOxUnit">MOxUnit</a> test framework by Nikolaas N. Oosterhof, the <a class="reference external" href="https://github.com/yalmip/YALMIP">YALMIP</a> toolbox for optimization modeling by Johan Löfberg, the <a class="reference external" href="https://github.com/sqlp/sdpt3">SDPT3</a> solver, and the <a class="reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/22725-variable-precision-integer-arithmetic">VPI</a> big integer library by John D’Errico.</p>
+<p><strong>RepLAB</strong> and the group theory/linear algebra libraries it depends on were initiated by <a class="reference external" href="https://github.com/denisrosset">Denis Rosset</a> and <a class="reference external" href="https://github.com/jdbancal">Jean-Daniel Bancal</a>. The project now has more <a class="reference external" href="https://github.com/replab/replab/graphs/contributors">contributors</a>.</p>
+<p><strong>RepLAB</strong> references in the <code class="docutils literal notranslate"><span class="pre">/external</span></code> directory the following libraries: the <a class="reference external" href="https://github.com/MOxUnit/MOxUnit">MOxUnit</a> test framework by Nikolaas N. Oosterhof, the <a class="reference external" href="https://github.com/yalmip/YALMIP">YALMIP</a> toolbox for optimization modeling by Johan Löfberg, the <a class="reference external" href="https://github.com/sqlp/sdpt3">SDPT3</a> solver, and the <a class="reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/22725-variable-precision-integer-arithmetic">VPI</a> big integer library by John D’Errico.</p>
 <p>Feedback and suggestions are always welcome. We ask participants to follow the guidelines of the <a class="reference external" href="https://typelevel.org/conduct.html">Typelevel Code of Conduct</a>.</p>
 </section>
 <section id="license">
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
-<p>RepLAB is (C) 2018-2021 Denis Rosset, Jean-Daniel Bancal and other collaborators, and licensed under the <a class="reference external" href="https://github.com/replab/replab/LICENSE">Mozilla Public License 2.0</a>.</p>
+<p><strong>RepLAB</strong> is (C) 2018-2021 Denis Rosset, Jean-Daniel Bancal and other collaborators, and licensed under the <a class="reference external" href="https://github.com/replab/replab/LICENSE">Mozilla Public License 2.0</a>.</p>
 </section>
 </section>
 

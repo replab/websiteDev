@@ -107,7 +107,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howto/index.html">How to</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Topic guides</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../nonlocality/index.html">Nonlocality</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Membrane vibration modes</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Eigenvalue problem of a vibrating square membrane, part 1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="membrane2.html">Eigenvalue problem of a vibrating square membrane, part 2</a></li>
@@ -502,7 +501,7 @@ oscillation states and the eigenspaces of our problem expressed in the new basis
 <li><p>About the diagonal red line, which will be denoted by <span class="math notranslate nohighlight">\(\sigma\)</span>, and</p></li>
 <li><p>About a vertical grey line <span class="math notranslate nohighlight">\(\tau\)</span> joining the midpoints of two opposite sides.</p></li>
 </ul>
-<center><p><img alt="2f7c0c34933247eb8cf0e62a15b7e0aa" src="../../_images/Square.png" /></p>
+<center><p><img alt="e1fb9acb3ee24815a52a5c12309cb62b" src="../../_images/Square.png" /></p>
 </center><p>Thereby, we can construct a representation of dimension <span class="math notranslate nohighlight">\(d=9\)</span> of <span class="math notranslate nohighlight">\(D_4\)</span> by regarding the 9 objects to be permuted as the lattice points inside the square region, while we transform the square under the action of <span class="math notranslate nohighlight">\(D_4\)</span>.</p>
 <section id="Constructing-D_4-as-a-subgroup-of-S_9">
 <h3>Constructing <span class="math notranslate nohighlight">\(D_4\)</span> as a subgroup of <span class="math notranslate nohighlight">\(S_9\)</span><a class="headerlink" href="#Constructing-D_4-as-a-subgroup-of-S_9" title="Permalink to this headline">¶</a></h3>
@@ -733,40 +732,40 @@ ans =
  Columns 1 through 8:
 
    1.0000        0        0        0        0        0        0        0
-        0   1.0000        0        0  -0.0000        0        0  -0.0000
+        0   1.0000        0        0        0        0        0   0.0000
         0        0   1.0000   0.0000        0  -0.0000   0.0000        0
-        0        0        0   1.0000        0   0.0000  -0.0000        0
+        0        0        0   1.0000        0  -0.0000   0.0000        0
         0        0        0        0  -1.0000        0        0   0.0000
-        0        0        0        0        0  -0.0000   1.0000        0
-        0        0        0        0        0   1.0000   0.0000        0
-        0   0.0000        0        0   0.0000        0        0  -0.0000
-        0        0        0        0        0        0        0   1.0000
+        0        0  -0.0000  -0.0000        0   0.8278   0.5610        0
+        0        0        0        0        0   0.5610  -0.8278        0
+        0        0        0        0        0        0        0   0.8278
+        0   0.0000        0        0        0        0        0   0.5610
 
  Column 9:
 
         0
-   0.0000
+  -0.0000
         0
         0
-   0.0000
         0
         0
-   1.0000
-   0.0000
+        0
+   0.5610
+  -0.8278
 
 ans =
 
  Columns 1 through 8:
 
    1.0000        0        0        0        0        0        0        0
-        0   1.0000        0        0   0.0000        0        0        0
+        0   1.0000        0        0   0.0000        0        0   0.0000
         0        0   1.0000  -0.0000        0  -0.0000   0.0000        0
-        0        0        0  -1.0000        0  -0.0000  -0.0000        0
+        0        0  -0.0000  -1.0000        0  -0.0000  -0.0000        0
         0        0        0        0   1.0000        0        0  -0.0000
-        0        0        0        0        0   1.0000   0.0000        0
-        0        0        0        0        0   0.0000  -1.0000        0
-        0        0        0        0        0        0        0   1.0000
-        0  -0.0000        0        0  -0.0000        0        0   0.0000
+        0        0        0        0        0  -0.5610   0.8278        0
+        0        0   0.0000   0.0000        0   0.8278   0.5610        0
+        0        0        0        0        0        0        0  -0.5610
+        0        0        0        0        0        0        0   0.8278
 
  Column 9:
 
@@ -774,11 +773,11 @@ ans =
    0.0000
         0
         0
-  -0.0000
-        0
-        0
    0.0000
-  -1.0000
+        0
+        0
+   0.8278
+   0.5610
 
 </pre></div></div>
 </div>
