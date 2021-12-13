@@ -55,8 +55,8 @@ LatticePoints = [1 2 3; 4 5 6; 7 8 9]
 % By doing so, and by writing explicitly down the rest of the equations we obtain a $n \times n$ matrix for $M$:
 
 M=[4 -1 0 -1 0 0 0 0 0; -1 4 -1 0 -1 0 0 0 0; 0 -1 4 0 0 -1 0 0 0;
-    -1 0 0 4 -1 0 -1 0 0; 0 -1 0 -1 4 -1 0 -1 0; 0 0 -1 0 -1 4 0 0 -1;
-    0 0 0 -1 0 0 4 -1 0;0 0 0 0 -1 0 -1 4 -1 ; 0 0 0 0 0 -1 0 -1 4] ;
+-1 0 0 4 -1 0 -1 0 0; 0 -1 0 -1 4 -1 0 -1 0; 0 0 -1 0 -1 4 0 0 -1;
+0 0 0 -1 0 0 4 -1 0;0 0 0 0 -1 0 -1 4 -1 ; 0 0 0 0 0 -1 0 -1 4] ;
 
 % Now, even though this matrix can be easily diagonalized to get the eigenfrequencies of the membrane oscillations, the eigenspaces computed in this basis do not offer much understanding into the eigenstates of our problem.
 %
@@ -162,3 +162,5 @@ inv(basis)*image1*basis
 inv(basis)*image2*basis
 
 % As expected, this verifies that the images have a block diagonal structure. In what follows, we are considering as our basis the vectors of the column space of the basis matrix, which *RepLAB* returns after the decomposition. This choice of basis vectors is ideal for the purposes of the block symmetrization, since it manifests the block-diagonal nature of the images.
+
+

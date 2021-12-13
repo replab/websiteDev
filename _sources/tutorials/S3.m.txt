@@ -102,7 +102,7 @@ parRep.image(S3.compose(element1, element2))
 
 allElements = S3.elements;
 for i = 1:length(allElements)
-    disp(['Image of [', num2str(allElements{i}), '] : ', num2str(parRep.image(allElements{i}))]);
+disp(['Image of [', num2str(allElements{i}), '] : ', num2str(parRep.image(allElements{i}))]);
 end
 
 % Therefore, this representation is not *faithful*.
@@ -117,7 +117,7 @@ trivRep = S3.repByImages('R', d, 'preimages', S3.generators, 'images', {1 1});
 % This time, the group law is trivially satisfied since all images are indeed equal to $1$:
 
 for i = 1:length(allElements)
-    disp(['Image of [', num2str(allElements{i}), '] : ', num2str(trivRep.image(allElements{i}))]);
+disp(['Image of [', num2str(allElements{i}), '] : ', num2str(trivRep.image(allElements{i}))]);
 end
 
 % ## Direct sum of representation of S(3)
@@ -174,3 +174,5 @@ inv(basis)*natRep.image(element2)*basis
 %
 % * One copy of the trivial representation of S(3)
 % * One copy of the a faithful 2 x 2 representation of S(3)
+
+

@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Eigenvalue problem of a vibrating square membrane, part 1 &#8212; RepLAB 0.9.5-SNAP documentation</title>
+    <title>Eigenvalue problem of a vibrating square membrane, part 1 &#8212; RepLAB 1.0.1-SNAP documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/guzzle.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
@@ -79,7 +79,7 @@
         <li class="right" >
           <a href="index.html" title="Membrane vibration modes"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">RepLAB 0.9.5-SNAP documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">RepLAB 1.0.1-SNAP documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Topic guides</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Membrane vibration modes</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Eigenvalue problem of a vibrating square membrane, part 1</a></li> 
@@ -95,7 +95,7 @@
   <a href="
     ../../index.html">RepLAB</a>&nbsp;&nbsp;
   <a href="https://github.com/replab/replab"><i class="fab fa-github"></i></a>&nbsp;
-  <a href="https://github.com/replab/replab/archive/v0.9.5-SNAP.zip"><i class="fa fa-download"></i></a>&nbsp;
+  <a href="https://github.com/replab/replab/archive/v1.0.1-SNAP.zip"><i class="fa fa-download"></i></a>&nbsp;
   <a href="https://gitter.im/replab/replab"><i class="fab fa-gitter"></i></a>&nbsp;
   <a href="https://travis-ci.com/replab/replab"><i class="fas fa-sync-alt"></i></a>&nbsp;
   <a href="https://codecov.io/gh/replab/replab"><i class="fas fa-umbrella"></i></a>
@@ -483,8 +483,8 @@ M\upsilon = \lambda \upsilon
 </div>
 <div class="input_area highlight-octave notranslate"><div class="highlight"><pre>
 <span></span><span class="n">M</span><span class="p">=[</span><span class="mi">4</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">4</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">4</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">4</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span><span class="p">;</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">4</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-    <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span><span class="p">;</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">4</span> <span class="o">-</span><span class="mi">1</span> <span class="p">;</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">4</span><span class="p">]</span> <span class="p">;</span>
+<span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">4</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span><span class="p">;</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">4</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span><span class="p">;</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">4</span> <span class="o">-</span><span class="mi">1</span> <span class="p">;</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">4</span><span class="p">]</span> <span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -501,7 +501,7 @@ oscillation states and the eigenspaces of our problem expressed in the new basis
 <li><p>About the diagonal red line, which will be denoted by <span class="math notranslate nohighlight">\(\sigma\)</span>, and</p></li>
 <li><p>About a vertical grey line <span class="math notranslate nohighlight">\(\tau\)</span> joining the midpoints of two opposite sides.</p></li>
 </ul>
-<center><p><img alt="e1fb9acb3ee24815a52a5c12309cb62b" src="../../_images/Square.png" /></p>
+<center><p><img alt="0850c9fe0d5048fc9ffd4292674a1ac0" src="../../_images/Square.png" /></p>
 </center><p>Thereby, we can construct a representation of dimension <span class="math notranslate nohighlight">\(d=9\)</span> of <span class="math notranslate nohighlight">\(D_4\)</span> by regarding the 9 objects to be permuted as the lattice points inside the square region, while we transform the square under the action of <span class="math notranslate nohighlight">\(D_4\)</span>.</p>
 <section id="Constructing-D_4-as-a-subgroup-of-S_9">
 <h3>Constructing <span class="math notranslate nohighlight">\(D_4\)</span> as a subgroup of <span class="math notranslate nohighlight">\(S_9\)</span><a class="headerlink" href="#Constructing-D_4-as-a-subgroup-of-S_9" title="Permalink to this headline">¶</a></h3>
@@ -732,14 +732,14 @@ ans =
  Columns 1 through 8:
 
    1.0000        0        0        0        0        0        0        0
-        0   1.0000        0        0        0        0        0   0.0000
-        0        0   1.0000   0.0000        0  -0.0000   0.0000        0
-        0        0        0   1.0000        0  -0.0000   0.0000        0
-        0        0        0        0  -1.0000        0        0   0.0000
-        0        0  -0.0000  -0.0000        0   0.8278   0.5610        0
-        0        0        0        0        0   0.5610  -0.8278        0
-        0        0        0        0        0        0        0   0.8278
-        0   0.0000        0        0        0        0        0   0.5610
+        0   1.0000        0        0   0.0000        0        0   0.0000
+        0        0   1.0000        0        0  -0.0000  -0.0000        0
+        0        0        0   1.0000        0   0.0000   0.0000        0
+        0        0        0        0  -1.0000        0        0  -0.0000
+        0        0        0        0        0  -0.8176  -0.5757        0
+        0        0        0        0        0  -0.5757   0.8176        0
+        0        0        0        0        0        0        0  -0.8176
+        0        0        0        0   0.0000        0        0  -0.5757
 
  Column 9:
 
@@ -747,25 +747,25 @@ ans =
   -0.0000
         0
         0
+   0.0000
         0
         0
-        0
-   0.5610
-  -0.8278
+  -0.5757
+   0.8176
 
 ans =
 
  Columns 1 through 8:
 
    1.0000        0        0        0        0        0        0        0
-        0   1.0000        0        0   0.0000        0        0   0.0000
-        0        0   1.0000  -0.0000        0  -0.0000   0.0000        0
-        0        0  -0.0000  -1.0000        0  -0.0000  -0.0000        0
-        0        0        0        0   1.0000        0        0  -0.0000
-        0        0        0        0        0  -0.5610   0.8278        0
-        0        0   0.0000   0.0000        0   0.8278   0.5610        0
-        0        0        0        0        0        0        0  -0.5610
-        0        0        0        0        0        0        0   0.8278
+        0   1.0000        0        0  -0.0000        0        0  -0.0000
+        0        0   1.0000        0        0  -0.0000  -0.0000        0
+        0        0        0  -1.0000        0   0.0000  -0.0000        0
+        0        0        0        0   1.0000        0        0   0.0000
+        0        0        0        0        0  -0.5757   0.8176        0
+        0        0        0        0        0   0.8176   0.5757        0
+        0        0        0        0   0.0000        0        0  -0.5757
+        0   0.0000        0        0        0        0        0   0.8176
 
  Column 9:
 
@@ -773,15 +773,24 @@ ans =
    0.0000
         0
         0
-   0.0000
+  -0.0000
         0
         0
-   0.8278
-   0.5610
+   0.8176
+   0.5757
 
 </pre></div></div>
 </div>
 <p>As expected, this verifies that the images have a block diagonal structure. In what follows, we are considering as our basis the vectors of the column space of the basis matrix, which <em>RepLAB</em> returns after the decomposition. This choice of basis vectors is ideal for the purposes of the block symmetrization, since it manifests the block-diagonal nature of the images.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-octave notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -822,7 +831,7 @@ ans =
         <li class="right" >
           <a href="index.html" title="Membrane vibration modes"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">RepLAB 0.9.5-SNAP documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">RepLAB 1.0.1-SNAP documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Topic guides</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Membrane vibration modes</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Eigenvalue problem of a vibrating square membrane, part 1</a></li> 

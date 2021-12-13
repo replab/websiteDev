@@ -20,7 +20,7 @@ replab_init('verbose', 0);
 % is a form of optimization that admits semidefinite
 % constraints (as in the condition that all eigenvalues of a matrix must be
 % positive). It naturally arises in various fields, including operational
-% research and polynomial optimization. 
+% research and polynomial optimization.
 %
 % The ability to solve a semidefinite program depends heavily on:
 %
@@ -79,8 +79,8 @@ MSymOpt = value(MSym)
 % matrix:
 
 indexMatrix = [1 2 3
-               1 4 5
-               6 7 8];
+1 4 5
+6 7 8];
 
 % An SDP matrix satisfying this constraint is then obtained
 
@@ -99,8 +99,8 @@ cstrSdpMatrix = replab.CommutantVar.fromIndexMatrix(indexMatrix, {permutation}, 
 x = sdpvar;
 y = sdpvar
 MSpecial = [1 x y
-            x 1 y
-            x y 1];
+x 1 y
+x y 1];
 
 % We can directly impose cyclic symmetry onto this matrix:
 
@@ -123,8 +123,8 @@ MSpecialSym >= 0
 % example, consider the following matrix
 
 MInvariant = [x 1 y
-              y x 1
-              1 y x];
+y x 1
+1 y x];
 
 % It is indeed invariant:
 
@@ -203,4 +203,6 @@ constraintsSym
 % * 2 variables
 % * 1 equality constraint
 % * SDP blocks of size 1x1 and 2x2
+
+
 

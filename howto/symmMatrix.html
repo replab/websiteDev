@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Symmetrizing a matrix &#8212; RepLAB 0.9.5-SNAP documentation</title>
+    <title>Symmetrizing a matrix &#8212; RepLAB 1.0.1-SNAP documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/guzzle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -79,7 +79,7 @@
         <li class="right" >
           <a href="sampleCommutant.html" title="Sampling the commutant of a representation"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">RepLAB 0.9.5-SNAP documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">RepLAB 1.0.1-SNAP documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">How to</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Symmetrizing a matrix</a></li> 
       </ul>
@@ -94,7 +94,7 @@
   <a href="
     ../index.html">RepLAB</a>&nbsp;&nbsp;
   <a href="https://github.com/replab/replab"><i class="fab fa-github"></i></a>&nbsp;
-  <a href="https://github.com/replab/replab/archive/v0.9.5-SNAP.zip"><i class="fa fa-download"></i></a>&nbsp;
+  <a href="https://github.com/replab/replab/archive/v1.0.1-SNAP.zip"><i class="fa fa-download"></i></a>&nbsp;
   <a href="https://gitter.im/replab/replab"><i class="fab fa-gitter"></i></a>&nbsp;
   <a href="https://travis-ci.com/replab/replab"><i class="fas fa-sync-alt"></i></a>&nbsp;
   <a href="https://codecov.io/gh/replab/replab"><i class="fas fa-umbrella"></i></a>
@@ -463,11 +463,11 @@ replab_init: Initialization done.
 <div class="highlight"><pre>
 M =
 
-   6.0441e-01   6.8711e-01   8.9144e-01   9.9683e-01   3.7809e-01
-   5.9479e-01   6.9042e-01   7.7816e-01   2.6821e-01   1.7023e-02
-   3.6010e-01   6.8121e-01   2.4051e-01   4.8751e-01   1.0806e-01
-   8.9813e-03   5.0507e-01   5.1180e-02   6.5778e-01   7.8339e-01
-   1.7332e-02   9.7505e-01   1.3946e-01   1.7779e-01   3.3472e-01
+   3.9381e-01   9.8941e-01   5.4186e-01   4.2184e-01   7.7646e-01
+   3.2418e-02   6.0009e-04   1.5760e-02   4.8169e-01   8.9639e-01
+   9.1912e-01   8.6042e-01   8.3493e-01   7.9709e-01   6.6973e-01
+   6.5035e-01   5.3441e-01   1.5838e-01   3.4153e-01   7.3014e-01
+   3.5535e-01   1.7148e-01   7.3291e-01   4.7046e-01   4.3204e-01
 
 </pre></div></div>
 </div>
@@ -530,11 +530,11 @@ generator(1 or &#39;x1&#39;): [2, 1, 4, 5, 3]
 <div class="highlight"><pre>
 MP =
 
-   0.6474   0.6409   0.5550   0.5550   0.5550
-   0.6409   0.6474   0.5550   0.5550   0.5550
-   0.4246   0.4246   0.4110   0.4701   0.1123
-   0.4246   0.4246   0.1123   0.4110   0.4701
-   0.4246   0.4246   0.4701   0.1123   0.4110
+   0.1972   0.5109   0.5223   0.5223   0.5223
+   0.5109   0.1972   0.5223   0.5223   0.5223
+   0.5819   0.5819   0.5362   0.7534   0.4329
+   0.5819   0.5819   0.4329   0.5362   0.7534
+   0.5819   0.5819   0.7534   0.4329   0.5362
 
 </pre></div></div>
 </div>
@@ -560,13 +560,22 @@ el =
 
 ans =
 
-   0.6474   0.6409   0.5550   0.5550   0.5550
-   0.6409   0.6474   0.5550   0.5550   0.5550
-   0.4246   0.4246   0.4110   0.4701   0.1123
-   0.4246   0.4246   0.1123   0.4110   0.4701
-   0.4246   0.4246   0.4701   0.1123   0.4110
+   0.1972   0.5109   0.5223   0.5223   0.5223
+   0.5109   0.1972   0.5223   0.5223   0.5223
+   0.5819   0.5819   0.5362   0.7534   0.4329
+   0.5819   0.5819   0.4329   0.5362   0.7534
+   0.5819   0.5819   0.7534   0.4329   0.5362
 
 </pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-octave notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
 </div>
 </section>
 </section>
@@ -607,7 +616,7 @@ ans =
         <li class="right" >
           <a href="sampleCommutant.html" title="Sampling the commutant of a representation"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">RepLAB 0.9.5-SNAP documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">RepLAB 1.0.1-SNAP documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >How to</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Symmetrizing a matrix</a></li> 
       </ul>

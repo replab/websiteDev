@@ -73,3 +73,5 @@ rep = U3.definingRep.tensorPower(3);
 % We then return $\\max(\\Delta_{i-10}, \\ldots, \\Delta_i)$ as an error estimate.
 
 rep.commutant.sample;
+
+

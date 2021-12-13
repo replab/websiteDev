@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Sphinx tips and tricks &#8212; RepLAB 0.9.5-SNAP documentation</title>
+    <title>Sphinx tips and tricks &#8212; RepLAB 1.0.1-SNAP documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/guzzle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -31,7 +31,7 @@
     <script src="../_static/js/collapse_helper.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Octave bugs" href="octave_bugs.html" />
+    <link rel="next" title="Octave compatibility" href="octave_compatibility.html" />
     <link rel="prev" title="Docker Octave image" href="docker.html" /> 
   
    
@@ -72,12 +72,12 @@
           <a href="../mat-modindex.html" title="MATLAB Module Index"
              >matlab index</a> |</li>
         <li class="right" >
-          <a href="octave_bugs.html" title="Octave bugs"
+          <a href="octave_compatibility.html" title="Octave compatibility"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="docker.html" title="Docker Octave image"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">RepLAB 0.9.5-SNAP documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">RepLAB 1.0.1-SNAP documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Development/Community</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Sphinx tips and tricks</a></li> 
       </ul>
@@ -92,7 +92,7 @@
   <a href="
     ../index.html">RepLAB</a>&nbsp;&nbsp;
   <a href="https://github.com/replab/replab"><i class="fab fa-github"></i></a>&nbsp;
-  <a href="https://github.com/replab/replab/archive/v0.9.5-SNAP.zip"><i class="fa fa-download"></i></a>&nbsp;
+  <a href="https://github.com/replab/replab/archive/v1.0.1-SNAP.zip"><i class="fa fa-download"></i></a>&nbsp;
   <a href="https://gitter.im/replab/replab"><i class="fab fa-gitter"></i></a>&nbsp;
   <a href="https://travis-ci.com/replab/replab"><i class="fas fa-sync-alt"></i></a>&nbsp;
   <a href="https://codecov.io/gh/replab/replab"><i class="fas fa-umbrella"></i></a>
@@ -121,7 +121,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#generation-of-jupyter-notebooks">Generation of Jupyter notebooks</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="octave_bugs.html">Octave bugs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="octave_compatibility.html">Octave compatibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="project_ideas.html">Project ideas</a></li>
 </ul>
 </li>
@@ -168,7 +168,7 @@
 <p>We write here miscellaneous tips and tricks.</p>
 <section id="sphinx-and-jupyter-required-packages">
 <h2>Sphinx and Jupyter required packages<a class="headerlink" href="#sphinx-and-jupyter-required-packages" title="Permalink to this headline">¶</a></h2>
-<p>I tried with Python 3 in a dedicated virtualenv in Ubuntu 18.04 as follows:</p>
+<p>Python 3 can be used in a dedicated virtualenv in Ubuntu 18.04 as follows:</p>
 <p>Run somewhere</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">sphinx</span>
 </pre></div>
@@ -183,30 +183,29 @@
 <li><p>sphinxcontrib-matlabdomain</p></li>
 <li><p>texext</p></li>
 <li><p>guzzle_sphinx_theme</p></li>
-<li><p>sphinx-collapse-admonitions</p></li>
+<li><p>sphinx-togglebutton</p></li>
 <li><p>sphinxcontrib-fulltoc</p></li>
 <li><p>ablog</p></li>
 </ul>
 <p>This can be done with the command</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">matlabdomain</span> <span class="n">texext</span> <span class="n">guzzle_sphinx_theme</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">collapse</span><span class="o">-</span><span class="n">admonitions</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">fulltoc</span> <span class="n">ablog</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">matlabdomain</span> <span class="n">texext</span> <span class="n">guzzle_sphinx_theme</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">togglebutton</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">fulltoc</span> <span class="n">ablog</span>
 </pre></div>
 </div>
-<p>(add the option “–user” if not installing inside a virtual environment)</p>
+<p>(add the option <code class="docutils literal notranslate"><span class="pre">--user</span></code> if not installing inside a virtual environment)</p>
 <p>For the Jupyter notebooks:</p>
 <p>Follow <a class="reference external" href="https://nbsphinx.readthedocs.io/en/latest/installation.html">https://nbsphinx.readthedocs.io/en/latest/installation.html</a></p>
 <p>In particular, install the Python package nbsphinx, and the Ubuntu package pandoc</p>
 <p>Then install also the project requirements by running the following command within the ‘sphinx’ folder:</p>
-<dl class="simple">
-<dt>::</dt><dd><p>pip install -r requirements.txt</p>
-</dd>
-</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
 <p>Later on?</p>
 <p>Proof environment? <a class="reference external" href="https://framagit.org/spalax/sphinxcontrib-proof/">https://framagit.org/spalax/sphinxcontrib-proof/</a></p>
 <p>Resources: <a class="reference external" href="https://github.com/yoloseem/awesome-sphinxdoc">https://github.com/yoloseem/awesome-sphinxdoc</a></p>
 </section>
 <section id="references-to-root-level-scripts">
 <h2>References to root-level scripts<a class="headerlink" href="#references-to-root-level-scripts" title="Permalink to this headline">¶</a></h2>
-<p>Scripts such as <code class="xref mat mat-obj docutils literal notranslate"><span class="pre">replab_init</span></code>, <a class="reference internal" href="../api/commands.html#root.replab_generate" title="root.replab_generate"><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">replab_generate</span></code></a> live in the fake <code class="docutils literal notranslate"><span class="pre">root</span></code> package, so these references look actually like <code class="xref mat mat-obj docutils literal notranslate"><span class="pre">root.replab_init</span></code> and <a class="reference internal" href="../api/commands.html#root.replab_generate" title="root.replab_generate"><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">root.replab_generate</span></code></a>.</p>
+<p>Scripts such as <a class="reference internal" href="../api/commands.html#root.replab_init" title="root.replab_init"><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">replab_init</span></code></a>, <a class="reference internal" href="../api/commands.html#root.replab_generate" title="root.replab_generate"><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">replab_generate</span></code></a> live in the fake <code class="docutils literal notranslate"><span class="pre">root</span></code> package, so these references look actually like <a class="reference internal" href="../api/commands.html#root.replab_init" title="root.replab_init"><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">root.replab_init</span></code></a> and <a class="reference internal" href="../api/commands.html#root.replab_generate" title="root.replab_generate"><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">root.replab_generate</span></code></a>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">root</span></code> prefix is stripped when displayed on the console. In the Sphinx documentation, one should use the <code class="docutils literal notranslate"><span class="pre">~</span></code> prefix.</p>
 </section>
 <section id="to-convert-matlab-live-scripts-to-jupyter-notebooks">
@@ -232,7 +231,7 @@
       </div>
     
       <div class="pull-right">
-        <a class="btn btn-default" href="octave_bugs.html" title="next chapter (use the right arrow)">Octave bugs</a>
+        <a class="btn btn-default" href="octave_compatibility.html" title="next chapter (use the right arrow)">Octave compatibility</a>
       </div>
     </div>
     <div class="clearer"></div>
@@ -250,12 +249,12 @@
           <a href="../mat-modindex.html" title="MATLAB Module Index"
              >matlab index</a> |</li>
         <li class="right" >
-          <a href="octave_bugs.html" title="Octave bugs"
+          <a href="octave_compatibility.html" title="Octave compatibility"
              >next</a> |</li>
         <li class="right" >
           <a href="docker.html" title="Docker Octave image"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">RepLAB 0.9.5-SNAP documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">RepLAB 1.0.1-SNAP documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >Development/Community</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Sphinx tips and tricks</a></li> 
       </ul>

@@ -17,11 +17,13 @@ group = S5.subgroup({[2 1 4 5 3]})
 
 % ## Representation
 %
-% The natural representation is 
+% The natural representation is
 
 rep = group.naturalRep
 
 % The representation of group elements are the expected $5 \times 5$ matrices:
 
 rep.image([2 1 5 3 4])
+
+
 

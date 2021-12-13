@@ -11,13 +11,13 @@ replab_init('verbose', 0);
 % ## Graph definition
 %
 % In *RepLAB*, undirected graphs are represented by the class
-% replab.UndirectedGraph. A graph can be initialized from a list of edges 
+% replab.UndirectedGraph. A graph can be initialized from a list of edges
 % or from an adjacency matrix. For instance, the graph with adjacency matrix
 
 M = [0 1 1 1
-     1 0 0 1
-     1 0 0 1
-     1 1 1 0];
+1 0 0 1
+1 0 0 1
+1 1 1 0];
 
 % is constructed by calling
 
@@ -34,4 +34,6 @@ group = graph.automorphismGroup
 % ## Bonus
 %
 % Graphs can have colored vertices as well as weighted edges. These are taken into account during the automorphism computation.
+
+
 

@@ -53,3 +53,5 @@ dec.component(2).irrepDimension
 
 singletBasis = dec.component(1).basis
 rest = dec.component(2).basis
+
+

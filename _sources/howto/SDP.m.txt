@@ -25,3 +25,5 @@ M = replab.CommutantVar.fromPermutations({permutation}, 'symmetric', 'real')
 
 see(M.fullMatrix)
 
+
+

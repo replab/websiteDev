@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Commands &#8212; RepLAB 0.9.5-SNAP documentation</title>
+    <title>Commands &#8212; RepLAB 1.0.1-SNAP documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/guzzle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -77,7 +77,7 @@
         <li class="right" >
           <a href="index.html" title="Technical Reference"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">RepLAB 0.9.5-SNAP documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">RepLAB 1.0.1-SNAP documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Technical Reference</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Commands</a></li> 
       </ul>
@@ -92,7 +92,7 @@
   <a href="
     ../index.html">RepLAB</a>&nbsp;&nbsp;
   <a href="https://github.com/replab/replab"><i class="fab fa-github"></i></a>&nbsp;
-  <a href="https://github.com/replab/replab/archive/v0.9.5-SNAP.zip"><i class="fa fa-download"></i></a>&nbsp;
+  <a href="https://github.com/replab/replab/archive/v1.0.1-SNAP.zip"><i class="fa fa-download"></i></a>&nbsp;
   <a href="https://gitter.im/replab/replab"><i class="fab fa-gitter"></i></a>&nbsp;
   <a href="https://travis-ci.com/replab/replab"><i class="fas fa-sync-alt"></i></a>&nbsp;
   <a href="https://codecov.io/gh/replab/replab"><i class="fas fa-umbrella"></i></a>
@@ -108,6 +108,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Technical Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#replab-version">replab_Version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#replab-init">replab_init</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#replab-checkhelp">replab_checkhelp</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#replab-generate">replab_generate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#replab-release">replab_release</a></li>
@@ -118,6 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="numerics.html">Numerics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="groups.html">Base group structures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="continuous_groups.html">Continuous groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finite_groups.html">Finite group structures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="permutation_groups.html">Permutation groups</a></li>
 <li class="toctree-l2"><a class="reference internal" href="named_discrete_groups.html">Named discrete groups</a></li>
 <li class="toctree-l2"><a class="reference internal" href="abstract_groups.html">Abstract groups and atlas</a></li>
@@ -175,7 +177,7 @@
           <div class="document clearer body">
              <section id="commands">
 <h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
-<p>The commands below do not belong to a package (although they are listed with the prefix <code class="xref mat mat-obj docutils literal notranslate"><span class="pre">root.</span></code>). They can be found either in the RepLAB <a class="reference internal" href="#module-root" title="root"><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">root</span></code></a> or <code class="xref mat mat-obj docutils literal notranslate"><span class="pre">src</span></code> folders.</p>
+<p>The commands below do not belong to a package (although they are listed with the prefix <code class="xref mat mat-obj docutils literal notranslate"><span class="pre">root.</span></code>). They can be found either in the <strong>RepLAB</strong> <a class="reference internal" href="#module-root" title="root"><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">root</span></code></a> or <code class="xref mat mat-obj docutils literal notranslate"><span class="pre">src</span></code> folders.</p>
 <span class="target" id="module-root"></span><section id="replab-version">
 <h2>replab_Version<a class="headerlink" href="#replab-version" title="Permalink to this headline">¶</a></h2>
 <dl class="mat class">
@@ -351,6 +353,46 @@ in the path.</p>
 <dd><p>Create a <a class="reference internal" href="#root.replab_Version" title="root.replab_Version"><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">replab_Version</span></code></a> object from the <code class="docutils literal notranslate"><span class="pre">replab_version.txt</span></code> text file</p>
 </dd></dl>
 
+</dd></dl>
+
+</section>
+<section id="replab-init">
+<h2>replab_init<a class="headerlink" href="#replab-init" title="Permalink to this headline">¶</a></h2>
+<dl class="mat function">
+<dt class="sig sig-object mat" id="root.replab_init">
+<span class="sig-prename descclassname"><span class="pre">root.</span></span><span class="sig-name descname"><span class="pre">replab_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#root.replab_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up the search path in order to enable all functionalities of the RepLAB library.</p>
+<p>You can call “replab_init” repeatedly without any problem. The first call initializes the library, and
+the second and subsequent calls detect that the library is initialized and bail out early.</p>
+<p>However, you need to call “replab_init” again after doing a “clear all”.</p>
+<p>Also verifies that a SDP solver is available, installs and registers the bundled SDPT3 solver if needed,
+and initializes important variables.</p>
+<p>The global variable <a class="reference internal" href="globals.html#+replab.+globals.replabPath" title="+replab.+globals.replabPath"><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">replab.globals.replabPath</span></code></a> is set up and <code class="docutils literal notranslate"><span class="pre">mlock</span></code>-ed so that it persists a <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">all</span></code>.</p>
+<p>This script accepts the following options:</p>
+<ul class="simple">
+<li><p>The key <code class="docutils literal notranslate"><span class="pre">verbose</span></code> followed by a value 0,1,2, controls the display level when initializating</p>
+<ul>
+<li><p>0: only produce a display in case of error/warning or for critical cases</p></li>
+<li><p>1: informs of the changes made (default value)</p></li>
+<li><p>2: prints full information</p></li>
+</ul>
+</li>
+<li><p>The option <code class="docutils literal notranslate"><span class="pre">autoinstall</span></code>: Install dependencies automatically</p></li>
+<li><p>The option <code class="docutils literal notranslate"><span class="pre">showurls</span></code>: Shows the URL that need to be downloaded to activate dependencies</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>varargin</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cell(1,*)</span> <span class="pre">of</span> <span class="pre">key/value</span> <span class="pre">pairs</span></code></span>) – Options, see description above</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">replab_init</span>   <span class="o">%</span> <span class="n">doctest</span><span class="p">:</span> <span class="o">+</span><span class="n">SKIP</span>
+<span class="go">    Adding RepLAB to the path</span>
+<span class="go">    Adding VPI to the path</span>
+<span class="go">    Adding MOxUnit to the path</span>
+<span class="go">    Adding embedded YALMIP to the path</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>
@@ -543,7 +585,7 @@ take a long time to run</p></li>
         <li class="right" >
           <a href="index.html" title="Technical Reference"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">RepLAB 0.9.5-SNAP documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">RepLAB 1.0.1-SNAP documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >Technical Reference</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Commands</a></li> 
       </ul>

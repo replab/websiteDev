@@ -40,3 +40,5 @@ G1v = G1.vectorStabilizer(v)
 
 G1v.elements
 
+
+
