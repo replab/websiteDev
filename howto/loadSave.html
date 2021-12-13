@@ -421,7 +421,7 @@ div.rendered_html tbody tr:hover {
 <p>As Octave does not support loading/saving of objects, RepLAB implements some methods to store and retrieve information to/from <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files.</p>
 <p>For now, the following objects implement a pair of <code class="docutils literal notranslate"><span class="pre">import</span></code>/<code class="docutils literal notranslate"><span class="pre">export</span></code> methods:</p>
 <ul class="simple">
-<li><p>+replab.Irreducible implements +replab.Irreducible.import and +replab.Irreducible.export. Their usage is documented below.</p></li>
+<li><p><a class="reference external" href="https://replab.github.io/replab/api/rep.html#+replab.Irreducible">replab.Irreducible</a> implements <a class="reference external" href="https://replab.github.io/replab/api/rep.html#+replab.Irreducible.import">import</a> and <a class="reference external" href="https://replab.github.io/replab/api/rep.html#+replab.Irreducible.export">export</a>. Their usage is documented below.</p></li>
 </ul>
 <p>Beyond those, some of our users report that loading/saving RepLAB objects to <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files work in recent versions of MATLAB. Please be careful as the use of <code class="docutils literal notranslate"><span class="pre">load</span></code> and <code class="docutils literal notranslate"><span class="pre">save</span></code> is currently unsupported. However, if you wish to export computed information about RepLAB objects and those objects are not in the list above, please file an <a class="reference external" href="https://github.com/replab/replab/issues">issue</a>, and we may consider extending our <code class="docutils literal notranslate"><span class="pre">import</span></code> / <code class="docutils literal notranslate"><span class="pre">export</span></code> mechanism.</p>
 <section id="Importing/exporting-information-about-decompositions">
@@ -463,7 +463,7 @@ Orthogonal reducible representation
           parent: Orthogonal reducible representation
 basis(1,&#39;exact&#39;): [1/3; 1/3; 1/3]
 basis(2,&#39;exact&#39;): [1/6; -1/3; 1/6]
-basis(3,&#39;exact&#39;): [-sqrt(3)/6; 0; sqrt(3)/6]
+basis(3,&#39;exact&#39;): [sqrt(3)/6; 0; -sqrt(3)/6]
     component(1): Isotypic component R(1) (trivial)
     component(2): Isotypic component R(2) (nontrivial)
 
@@ -502,7 +502,7 @@ Orthogonal reducible representation
           parent: Orthogonal reducible representation
 basis(1,&#39;exact&#39;): [1/3; 1/3; 1/3]
 basis(2,&#39;exact&#39;): [1/6; -1/3; 1/6]
-basis(3,&#39;exact&#39;): [-sqrt(3)/6; 0; sqrt(3)/6]
+basis(3,&#39;exact&#39;): [sqrt(3)/6; 0; -sqrt(3)/6]
     component(1): Isotypic component R(1) (trivial)
     component(2): Isotypic component R(2) (nontrivial)
 
