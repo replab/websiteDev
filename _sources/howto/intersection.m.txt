@@ -28,6 +28,3 @@ G2 = S4.subgroup(generators2)
 G12 = intersection(G1, G2)
 
 % In this case, the intersection is the group which only permutes the two middle elements, i.e. S(2) action on elements 2 and 3.
-
-
-

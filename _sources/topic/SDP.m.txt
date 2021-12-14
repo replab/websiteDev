@@ -203,6 +203,3 @@ constraintsSym
 % * 2 variables
 % * 1 equality constraint
 % * SDP blocks of size 1x1 and 2x2
-
-
-

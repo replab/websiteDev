@@ -14,6 +14,3 @@ replab_init('verbose', 0);
 % the cyclic group of order 3 can be defined as
 
 group = replab.AbstractGroup.fromPresentation('< x | x^3 = 1 >')
-
-
-

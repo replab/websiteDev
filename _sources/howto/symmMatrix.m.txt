@@ -37,6 +37,3 @@ MP = com.project(M)
 
 el = group.sample
 MP(el,el)
-
-
-

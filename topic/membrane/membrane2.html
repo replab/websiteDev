@@ -483,24 +483,24 @@ M_block =
  Columns 1 through 8:
 
    4.0000  -1.0000        0        0        0        0        0  -0.0000
-  -4.0000   4.0000  -2.0000   0.0000   0.0000   0.0000  -0.0000   0.0000
-        0  -2.0000   4.0000        0        0   0.0000   0.0000  -0.0000
+  -4.0000   4.0000  -2.0000        0   0.0000   0.0000   0.0000  -0.0000
+        0  -2.0000   4.0000   0.0000        0        0  -0.0000  -0.0000
         0  -0.0000   0.0000   4.0000        0  -0.0000   0.0000   0.0000
-        0        0        0        0   4.0000   0.0000  -0.0000   0.0000
-        0  -0.0000   0.0000  -0.0000  -0.0000   4.0000  -0.0000   1.4142
-        0        0        0        0        0        0   4.0000  -0.0000
-  -0.0000   0.0000        0        0   0.0000   1.4142  -0.0000   4.0000
-        0        0        0        0        0   0.0000   1.4142  -0.0000
+  -0.0000   0.0000  -0.0000        0   4.0000  -0.0000  -0.0000   0.0000
+        0  -0.0000   0.0000  -0.0000  -0.0000   4.0000   0.0000  -1.4142
+        0        0        0        0        0  -0.0000   4.0000   0.0000
+   0.0000  -0.0000        0        0  -0.0000  -1.4142  -0.0000   4.0000
+        0        0        0        0        0   0.0000  -1.4142   0.0000
 
  Column 9:
 
-  -0.0000
-  -0.0000
-  -0.0000
+   0.0000
   -0.0000
    0.0000
-        0
-   1.4142
+  -0.0000
+   0.0000
+   0.0000
+  -1.4142
    0.0000
    4.0000
 
@@ -538,10 +538,10 @@ that we labelled our basis vectors.</p>
 <div class="highlight"><pre>
 ans =
 
-   4.0000  -0.0000   1.4142        0
-        0   4.0000  -0.0000   1.4142
-   1.4142  -0.0000   4.0000   0.0000
-   0.0000   1.4142  -0.0000   4.0000
+   4.0000e+00   3.3132e-16  -1.4142e+00   1.0070e-18
+  -2.4548e-16   4.0000e+00   5.8027e-17  -1.4142e+00
+  -1.4142e+00  -9.4201e-17   4.0000e+00   5.9770e-17
+   7.7527e-17  -1.4142e+00   5.7403e-17   4.0000e+00
 
 </pre></div></div>
 </div>
@@ -562,10 +562,10 @@ ans =
 <div class="highlight"><pre>
 M_block_Iso4 =
 
-   4.0000   1.4142  -0.0000        0
-   1.4142   4.0000  -0.0000   0.0000
-        0  -0.0000   4.0000   1.4142
-   0.0000  -0.0000   1.4142   4.0000
+   4.0000e+00  -1.4142e+00   3.3132e-16   1.0070e-18
+  -1.4142e+00   4.0000e+00  -9.4201e-17   5.9770e-17
+  -2.4548e-16   5.8027e-17   4.0000e+00  -1.4142e+00
+   7.7527e-17   5.7403e-17  -1.4142e+00   4.0000e+00
 
 </pre></div></div>
 </div>
@@ -693,17 +693,17 @@ E3 = 4
 <div class="highlight"><pre>
 Block4 =
 
-   4.0000   1.4142  -0.0000        0
-   1.4142   4.0000  -0.0000   0.0000
-        0  -0.0000   4.0000   1.4142
-   0.0000  -0.0000   1.4142   4.0000
+   4.0000e+00  -1.4142e+00   3.3132e-16   1.0070e-18
+  -1.4142e+00   4.0000e+00  -9.4201e-17   5.9770e-17
+  -2.4548e-16   5.8027e-17   4.0000e+00  -1.4142e+00
+   7.7527e-17   5.7403e-17  -1.4142e+00   4.0000e+00
 
 U4 =
 
-   7.0711e-01  -7.0711e-01  -1.0041e-02   5.7689e-02
-   7.0711e-01   7.0711e-01   1.0041e-02   5.7689e-02
-   1.4712e-16   1.4712e-16  -7.0704e-01   7.0475e-01
-  -2.2812e-17  -2.2812e-17   7.0704e-01   7.0475e-01
+   7.0711e-01  -7.0711e-01   1.3962e-01  -1.1695e-01
+  -7.0711e-01  -7.0711e-01  -1.3962e-01  -1.1695e-01
+  -1.2274e-16  -1.2274e-16  -6.9319e-01   6.9737e-01
+   3.8764e-17   3.8764e-17   6.9319e-01   6.9737e-01
 
 E4 =
 
@@ -711,8 +711,8 @@ Diagonal Matrix
 
    5.4142        0        0        0
         0   2.5858        0        0
-        0        0   2.5858        0
-        0        0        0   5.4142
+        0        0   5.4142        0
+        0        0        0   2.5858
 
 </pre></div></div>
 </div>
@@ -825,15 +825,6 @@ HS_matrix =
 <em>RepLAB</em>: the change of basis matrix that it provides, every time we ask <em>RepLAB</em> to decompose a representation into its irreducible components.</p>
 <p>Before we close, even though we discretized the square region using only <span class="math notranslate nohighlight">\(n=9\)</span> lattice points, thus asking for the dihedral group <span class="math notranslate nohighlight">\(D_4\)</span> as a subgroup in the group <span class="math notranslate nohighlight">\(S_9\)</span>, a generalization of the method presented in this document is straighforward in arbitrary number of points. For instance, we could have employed a lattice with even more points and asking for <span class="math notranslate nohighlight">\(D_4\)</span> as a subgroup in the symmetric group <span class="math notranslate nohighlight">\(S_n\)</span>. However, for the purposes of the current tutorial, we
 decided to use only 9 lattice points and focus on making clear how a block-diagonal structure for the matrix <span class="math notranslate nohighlight">\(M\)</span> can be accomplished numerically in <em>RepLAB</em>.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-octave notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
-</div>
-</div>
 </section>
 </section>
 </section>

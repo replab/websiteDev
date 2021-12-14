@@ -39,6 +39,3 @@ G1v = G1.vectorStabilizer(v)
 % This group only contains the two permutations of Gv which also belong to G1:
 
 G1v.elements
-
-
-

@@ -24,6 +24,3 @@ M = replab.CommutantVar.fromPermutations({permutation}, 'symmetric', 'real')
 % The SDP matrix $M$ involves only 2 variables, corresponding to the only degrees of freedom left by the constraints. Here is their parametrization:
 
 see(M.fullMatrix)
-
-
-

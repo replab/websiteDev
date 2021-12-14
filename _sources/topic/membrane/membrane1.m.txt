@@ -162,5 +162,3 @@ inv(basis)*image1*basis
 inv(basis)*image2*basis
 
 % As expected, this verifies that the images have a block diagonal structure. In what follows, we are considering as our basis the vectors of the column space of the basis matrix, which *RepLAB* returns after the decomposition. This choice of basis vectors is ideal for the purposes of the block symmetrization, since it manifests the block-diagonal nature of the images.
-
-

@@ -34,6 +34,3 @@ group = graph.automorphismGroup
 % ## Bonus
 %
 % Graphs can have colored vertices as well as weighted edges. These are taken into account during the automorphism computation.
-
-
-

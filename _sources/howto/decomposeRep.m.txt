@@ -23,6 +23,3 @@ rep = group.naturalRep
 dec = rep.decomposition
 
 % This representation contains 3 irreducible components.
-
-
-

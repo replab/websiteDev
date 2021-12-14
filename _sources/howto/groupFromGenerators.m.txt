@@ -33,6 +33,3 @@ gen2 = [2 3 4 5 1];
 groupS5 = S5.subgroup({gen1, gen2})
 
 % where the cell array contains the set of generators.
-
-
-

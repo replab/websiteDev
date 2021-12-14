@@ -174,5 +174,3 @@ inv(basis)*natRep.image(element2)*basis
 %
 % * One copy of the trivial representation of S(3)
 % * One copy of the a faithful 2 x 2 representation of S(3)
-
-

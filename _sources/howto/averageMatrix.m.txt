@@ -40,6 +40,3 @@ MP = com.project(M)
 
 el = rep.sample;
 el*MP*el'
-
-
-

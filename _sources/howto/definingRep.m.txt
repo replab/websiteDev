@@ -19,6 +19,3 @@ group = replab.U(3);
 % The defining representation is given by
 
 rep = group.definingRep
-
-
-

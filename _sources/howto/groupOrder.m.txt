@@ -23,6 +23,3 @@ G.order
 % Once computed, the order is a property of the group
 
 G
-
-
-

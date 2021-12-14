@@ -31,6 +31,3 @@ commEl = comm.sample
 groupEl = rep.sample
 
 groupEl*commEl*groupEl'
-
-
-

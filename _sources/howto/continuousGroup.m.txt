@@ -17,6 +17,3 @@ group = replab.U(2)
 % *RepLAB* integrates several standard compact groups, which can be constructed
 % in a similar fashion. This includes in particular the special unitary group,
 % the (special) orthogonal group and the symplectic group.
-
-
-
