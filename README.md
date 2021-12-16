@@ -1,2 +1,2 @@
 # websiteDev
-A temporary repository to work on the RepLAB website without affecting it. To use this project, run the associated GitHub action. It runs Sphinx on the `develop` branch of `https://www.github.com/replab/replab` and pushes the resulting website onto [https://replab.github.io/websiteDev](https://replab.github.io/websiteDev).
+A development repository to work on the RepLAB website. To use this project, run one of the associated [GitHub action](https://github.com/replab/websiteDev/actions). It runs Sphinx on one of the branches of `https://www.github.com/replab/replab` (either `updateDoc` or `develop`) and pushes the resulting website onto [https://replab.github.io/websiteDev](https://replab.github.io/websiteDev).
