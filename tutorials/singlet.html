@@ -424,13 +424,13 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-replab_init: Initialization done.
+error: &#39;replab_init&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <section id="The-unitary-group-representation">
 <h2>The unitary group representation<a class="headerlink" href="#The-unitary-group-representation" title="Permalink to this headline">¶</a></h2>
 <p>Changes of bases for one system are described by the group <span class="math notranslate nohighlight">\(U(2)\)</span></p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -440,8 +440,16 @@ replab_init: Initialization done.
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: &#39;replab&#39; undefined near line 1, column 1
+</pre></div></div>
+</div>
 <p>We construct the defining representation of this group, which acts on <span class="math notranslate nohighlight">\(C^2\)</span>:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
@@ -450,11 +458,19 @@ replab_init: Initialization done.
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: &#39;U2&#39; undefined near line 1, column 1
+</pre></div></div>
+</div>
 </section>
 <section id="Tensor-product-of-two-representations">
 <h2>Tensor product of two representations<a class="headerlink" href="#Tensor-product-of-two-representations" title="Permalink to this headline">¶</a></h2>
 <p>We can now construct the representation which acts jointly on two subsystems of dimension 2:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -463,8 +479,16 @@ replab_init: Initialization done.
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: &#39;U2Rep&#39; undefined near line 1, column 1
+</pre></div></div>
+</div>
 <p>To identify the subspaces which are invariant under this group, we decompose the representation:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
@@ -472,6 +496,14 @@ replab_init: Initialization done.
 <span></span><span class="n">dec</span> <span class="p">=</span> <span class="n">U2TensorRep</span><span class="p">.</span><span class="n">decomposition</span><span class="p">.</span><span class="n">nice</span><span class="p">;</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: &#39;U2TensorRep&#39; undefined near line 1, column 1
+</pre></div></div>
 </div>
 <p>The decomposition has</p>
 <div class="nbinput docutils container">
@@ -488,7 +520,7 @@ replab_init: Initialization done.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans = 2
+error: &#39;dec&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>components, of dimension</p>
@@ -506,7 +538,7 @@ ans = 2
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans = 1
+error: &#39;dec&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>and</p>
@@ -524,7 +556,7 @@ ans = 1
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans = 3
+error: &#39;dec&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>These are the antisymmetric and symmetric subspaces respectively. The change of basis into the first component identifies the antisymetric subspace, also known as the <em>singlet state</em>:</p>
@@ -543,20 +575,8 @@ ans = 3
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-singletBasis =
-
-        0
-   0.5000
-  -0.5000
-        0
-
-rest =
-
-   1.0000        0        0
-        0        0   0.5000
-        0        0   0.5000
-        0   1.0000        0
-
+error: &#39;dec&#39; undefined near line 1, column 1
+error: &#39;dec&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 </section>

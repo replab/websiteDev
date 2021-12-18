@@ -428,7 +428,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-replab_init: Initialization done.
+error: &#39;replab_init&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <section id="The-symmetric-group">
@@ -456,7 +456,7 @@ replab_init: Initialization done.
 </div>
 <p>In general there are <span class="math notranslate nohighlight">\(n!\)</span> such arrangements (i.e. <span class="math notranslate nohighlight">\(6\)</span> arrangements for <span class="math notranslate nohighlight">\(n=3\)</span>).</p>
 <p>In <em>RepLAB</em>, the symmetric group can be constructed with a simple command</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -465,6 +465,14 @@ replab_init: Initialization done.
 <span class="n">S3</span> <span class="p">=</span> <span class="n">replab</span><span class="p">.</span><span class="n">S</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: &#39;replab&#39; undefined near line 1, column 1
+</pre></div></div>
 </div>
 <p>The elements of the group can be easily listed</p>
 <div class="nbinput docutils container">
@@ -481,34 +489,9 @@ replab_init: Initialization done.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans =
-{
-  [1,1] =
-
-     1   2   3
-
-  [1,2] =
-
-     1   3   2
-
-  [1,3] =
-
-     2   1   3
-
-  [1,4] =
-
-     2   3   1
-
-  [1,5] =
-
-     3   1   2
-
-  [1,6] =
-
-     3   2   1
-
-}
-
+error: invalid call to script /github/workspace/generated/sphinx/tutorials/S3.m
+error: called from
+    S3
 </pre></div></div>
 </div>
 <p>The number of elements is the order of the group</p>
@@ -526,8 +509,9 @@ ans =
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans =
-    6
+error: invalid call to script /github/workspace/generated/sphinx/tutorials/S3.m
+error: called from
+    S3
 </pre></div></div>
 </div>
 <p>As we see, permutations are represented by row-vectors with an arrangement of the elements <span class="math notranslate nohighlight">\(1,\ldots,n\)</span>.</p>
@@ -548,10 +532,9 @@ ans =
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans =
-
-   2   3   1
-
+error: invalid call to script /github/workspace/generated/sphinx/tutorials/S3.m
+error: called from
+    S3
 </pre></div></div>
 </div>
 </section>
@@ -560,7 +543,7 @@ ans =
 <p>A group can always be represented by matrices of finite dimension. In a <span class="math notranslate nohighlight">\(d\)</span>-dimensional matrix representation, each group element is associated with a <span class="math notranslate nohighlight">\(d \times d\)</span> matrix called the image of the group element. The action of matrix multiplication on the images then reflects the group composition rule.</p>
 <p>Several matrix representations are possible for the same group, possibly in various dimension <span class="math notranslate nohighlight">\(d\)</span>. Here, we are going to explore some representations of the group <span class="math notranslate nohighlight">\(S_3\)</span></p>
 <p>When seeing the group as a permutation within <span class="math notranslate nohighlight">\(n\)</span> elements, a natural choice of representation arises in dimension <span class="math notranslate nohighlight">\(d=n\)</span>, where the permutation is applied to the coordinates of the vector space <span class="math notranslate nohighlight">\(R^n\)</span>. This is called the <em>natural representation</em> of a group. It can be constructed easily:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
@@ -568,6 +551,16 @@ ans =
 <span></span><span class="n">natRep</span> <span class="p">=</span> <span class="n">S3</span><span class="p">.</span><span class="n">naturalRep</span><span class="p">;</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: invalid call to script /github/workspace/generated/sphinx/tutorials/S3.m
+error: called from
+    S3
+</pre></div></div>
 </div>
 <p>The image of a group element in this representation can be extracted</p>
 <div class="nbinput docutils container">
@@ -584,12 +577,7 @@ ans =
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans =
-
-   0   1   0
-   1   0   0
-   0   0   1
-
+error: &#39;natRep&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>We see that the matrices representing the group elements are <span class="math notranslate nohighlight">\(n \times n\)</span> permutation matrices, which simply apply the permutation to the coordinates of the vector space <span class="math notranslate nohighlight">\(R^n\)</span>.</p>
@@ -611,18 +599,10 @@ ans =
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans =
-
-   0   0   1
-   1   0   0
-   0   1   0
-
-ans =
-
-   0   0   1
-   1   0   0
-   0   1   0
-
+error: &#39;natRep&#39; undefined near line 1, column 1
+error: &#39;natRep&#39; undefined near line 1, column 1
+error: &#39;image1&#39; undefined near line 1, column 1
+error: &#39;natRep&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>We see that the image of the product of elements is indeed the product of the images of the respective elements, i.e. the algebra of matrices acting on the representation images accurately reflects the group algebra.</p>
@@ -646,14 +626,10 @@ ans =
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans =
-
-   2   3   1
-
-ans =
-
-   2   1   3
-
+error: invalid call to script /github/workspace/generated/sphinx/tutorials/S3.m
+error: called from
+    S3
+error: &#39;generators&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>Let us construct a representation of this group in dimension</p>
@@ -667,7 +643,7 @@ ans =
 </div>
 </div>
 <p>associating the each generator its parity (i.e. either <span class="math notranslate nohighlight">\(+1\)</span> or <span class="math notranslate nohighlight">\(-1\)</span>). Since the parity of [2 3 1] is 1 and the parity of [2 1 3] is -1, this is achieved by instantiating calling the <em>repByImages</em> methods on the group:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
@@ -675,6 +651,16 @@ ans =
 <span></span><span class="n">parRep</span> <span class="p">=</span> <span class="n">S3</span><span class="p">.</span><span class="n">repByImages</span><span class="p">(</span><span class="s">&#39;R&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="s">&#39;preimages&#39;</span><span class="p">,</span> <span class="n">S3</span><span class="p">.</span><span class="n">generators</span><span class="p">,</span> <span class="s">&#39;images&#39;</span><span class="p">,</span> <span class="p">{</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span><span class="p">});</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: invalid call to script /github/workspace/generated/sphinx/tutorials/S3.m
+error: called from
+    S3
+</pre></div></div>
 </div>
 <p>We can check that this representation is valid</p>
 <div class="nbinput docutils container">
@@ -694,10 +680,10 @@ ans =
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-image1 = -1
-image2 = -1
-ans = 1
-ans = 1
+error: &#39;parRep&#39; undefined near line 1, column 1
+error: &#39;parRep&#39; undefined near line 1, column 1
+error: &#39;image1&#39; undefined near line 1, column 1
+error: &#39;parRep&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>The parity of each binary permutation <code class="docutils literal notranslate"><span class="pre">[2</span> <span class="pre">1</span> <span class="pre">3]</span></code> and <code class="docutils literal notranslate"><span class="pre">[1</span> <span class="pre">3</span> <span class="pre">2]</span></code> is <span class="math notranslate nohighlight">\(-1\)</span>, and their product, the cycle [2 3 1], has parity <span class="math notranslate nohighlight">\(1\)</span>.</p>
@@ -719,12 +705,10 @@ ans = 1
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Image of [1  2  3] : 1
-Image of [1  3  2] : -1
-Image of [2  1  3] : -1
-Image of [2  3  1] : 1
-Image of [3  1  2] : 1
-Image of [3  2  1] : -1
+error: invalid call to script /github/workspace/generated/sphinx/tutorials/S3.m
+error: called from
+    S3
+error: &#39;allElements&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>Therefore, this representation is not <em>faithful</em>.</p>
@@ -733,7 +717,7 @@ Image of [3  2  1] : -1
 <h2>The trivial representation of S(3)<a class="headerlink" href="#The-trivial-representation-of-S(3)" title="Permalink to this headline">¶</a></h2>
 <p>An even simpler representation of the group S(n) is one in which the image of all elements is set to <span class="math notranslate nohighlight">\(1\)</span>. This is called the <em>trivial representation</em>.</p>
 <p>It can be constructed similarly from the image of the generators:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
@@ -741,6 +725,16 @@ Image of [3  2  1] : -1
 <span></span><span class="n">trivRep</span> <span class="p">=</span> <span class="n">S3</span><span class="p">.</span><span class="n">repByImages</span><span class="p">(</span><span class="s">&#39;R&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="s">&#39;preimages&#39;</span><span class="p">,</span> <span class="n">S3</span><span class="p">.</span><span class="n">generators</span><span class="p">,</span> <span class="s">&#39;images&#39;</span><span class="p">,</span> <span class="p">{</span><span class="mi">1</span> <span class="mi">1</span><span class="p">});</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: invalid call to script /github/workspace/generated/sphinx/tutorials/S3.m
+error: called from
+    S3
+</pre></div></div>
 </div>
 <p>This time, the group law is trivially satisfied since all images are indeed equal to <span class="math notranslate nohighlight">\(1\)</span>:</p>
 <div class="nbinput docutils container">
@@ -759,12 +753,7 @@ Image of [3  2  1] : -1
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Image of [1  2  3] : 1
-Image of [1  3  2] : 1
-Image of [2  1  3] : 1
-Image of [2  3  1] : 1
-Image of [3  1  2] : 1
-Image of [3  2  1] : 1
+error: &#39;allElements&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 </section>
@@ -786,16 +775,7 @@ Image of [3  2  1] : 1
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-newRep =
-
-Orthogonal direct sum representation
-dimension: 4
-    field: &#39;R&#39;
-    group: Symmetric group acting on 3 elements
-isUnitary: true
-factor(1): Orthogonal reducible representation
-factor(2): Orthogonal representation
-
+error: &#39;natRep&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>The images are then <span class="math notranslate nohighlight">\(4 \times 4\)</span> matrices</p>
@@ -814,20 +794,8 @@ factor(2): Orthogonal representation
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans =
-
-   0   1   0   0
-   1   0   0   0
-   0   0   1   0
-   0   0   0  -1
-
-ans =
-
-   1   0   0   0
-   0   0   1   0
-   0   1   0   0
-   0   0   0  -1
-
+error: &#39;newRep&#39; undefined near line 1, column 1
+error: &#39;newRep&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>As expected, the images have a block diagonal structure. The properties of a direct sum representation are thus captured by the properties of the representation in each block. Such a representation is <em>reducible</em>.</p>
@@ -851,7 +819,8 @@ ans =
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans = 2
+error: &#39;natRep&#39; undefined near line 1, column 1
+error: &#39;natDec&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>This shows that the defininig representation of <span class="math notranslate nohighlight">\(S_3\)</span> has two <em>irreducible components</em>, of dimension <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span> respectively:</p>
@@ -870,8 +839,8 @@ ans = 2
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans = 1
-ans = 2
+error: &#39;natDec&#39; undefined near line 1, column 1
+error: &#39;natDec&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>The decomposition also provides the change of basis matrix which makes |this decomposition apparent</p>
@@ -889,12 +858,7 @@ ans = 2
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-basis =
-
-   0.3333   0.6667  -0.3333
-   0.3333  -0.3333   0.6667
-   0.3333  -0.3333  -0.3333
-
+error: &#39;natDec&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>The images of the two elements of <span class="math notranslate nohighlight">\(S_3\)</span>, <code class="docutils literal notranslate"><span class="pre">[2</span> <span class="pre">1</span> <span class="pre">3]</span></code> and <code class="docutils literal notranslate"><span class="pre">[1</span> <span class="pre">3</span> <span class="pre">2]</span></code> are indeed block-diagonal in this basis:</p>
@@ -913,18 +877,8 @@ basis =
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans =
-
-   1   0   0
-   0   0   1
-   0   1   0
-
-ans =
-
-   1   0   0
-   0   1  -1
-   0   0  -1
-
+error: &#39;basis&#39; undefined near line 1, column 1
+error: &#39;basis&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 </section>

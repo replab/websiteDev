@@ -402,7 +402,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-replab_init: Initialization done.
+error: &#39;replab_init&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>Error estimation will play a central role in RepLAB. Currently, tolerances are baked-in in the representation decomposition algorithms, but we will remove those “magic constants” in the next RepLAB releases, to be replaced by proper error estimation.</p>
@@ -417,7 +417,7 @@ replab_init: Initialization done.
 <section id="For-representations-over-compact-groups">
 <h2>For representations over compact groups<a class="headerlink" href="#For-representations-over-compact-groups" title="Permalink to this headline">¶</a></h2>
 <p>We’ll explain our process on the representation <span class="math notranslate nohighlight">\(U \otimes U \otimes U\)</span> where <span class="math notranslate nohighlight">\(U\)</span> is the unitary group of dimension 3.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -427,6 +427,15 @@ replab_init: Initialization done.
 <span class="n">rep</span> <span class="p">=</span> <span class="n">U3</span><span class="p">.</span><span class="n">definingRep</span><span class="p">.</span><span class="n">tensorPower</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: &#39;replab&#39; undefined near line 1, column 1
+error: &#39;U3&#39; undefined near line 1, column 1
+</pre></div></div>
 </div>
 <p>To decompose that representation, we need to take generic samples from the commutant algebra. This is achieved by projecting a random matrix on the invariant subspace using an iterative algorithm. <span class="math notranslate nohighlight">\(X_0\)</span> is that random initial matrix, and then our iteration is:</p>
 <div class="math notranslate nohighlight">
@@ -448,7 +457,7 @@ becomes comparable to the noise floor <span class="math notranslate nohighlight"
 <li><p>The crossing point was clearly exceeded. Concretely, we check that the number of iterations is at least <span class="math notranslate nohighlight">\(i \ge \max(\xi + 10, \xi_5)\)</span>, where <span class="math notranslate nohighlight">\(\xi_5=\frac{\ln \alpha - \ln \nu'}{\beta}\)</span>, <span class="math notranslate nohighlight">\(\ln\nu' = \ln\nu + 5\text{std}(\{R_i\}_i)\)</span> and <span class="math notranslate nohighlight">\(R_i=\Delta_i-f(i)\)</span> are the fit residuals.</p></li>
 </ul>
 <p>We then return <span class="math notranslate nohighlight">\(\\max(\\Delta_{i-10}, \\ldots, \\Delta_i)\)</span> as an error estimate.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
@@ -456,6 +465,14 @@ becomes comparable to the noise floor <span class="math notranslate nohighlight"
 <span></span><span class="n">rep</span><span class="p">.</span><span class="n">commutant</span><span class="p">.</span><span class="n">sample</span><span class="p">;</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: &#39;rep&#39; undefined near line 1, column 1
+</pre></div></div>
 </div>
 </section>
 </section>

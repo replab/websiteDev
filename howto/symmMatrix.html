@@ -440,7 +440,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-replab_init: Initialization done.
+error: &#39;replab_init&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 </section>
@@ -463,11 +463,11 @@ replab_init: Initialization done.
 <div class="highlight"><pre>
 M =
 
-   0.531952   0.047281   0.430443   0.285545   0.854200
-   0.280468   0.810314   0.106498   0.263814   0.776360
-   0.793715   0.778539   0.772261   0.139367   0.306664
-   0.509609   0.889524   0.025989   0.754250   0.083567
-   0.732350   0.680733   0.773470   0.448324   0.087431
+   0.621643   0.619090   0.081982   0.092140   0.913552
+   0.671542   0.743053   0.937668   0.976221   0.789840
+   0.383565   0.805961   0.125831   0.767786   0.268610
+   0.958131   0.081291   0.444176   0.724949   0.751837
+   0.221022   0.440804   0.710111   0.542094   0.964233
 
 </pre></div></div>
 </div>
@@ -491,20 +491,15 @@ M =
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-group =
-
-Permutation group acting on 5 elements of order 6
-            identity: [1, 2, 3, 4, 5]
-generator(1 or &#39;x1&#39;): [2, 1, 4, 5, 3]
-    recognize.source: Cyclic group C(6) of order 6 &lt; x | x^6 = 1 &gt;
-
+error: &#39;replab&#39; undefined near line 1, column 1
+error: &#39;S5&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 </section>
 <section id="Averaging-over-the-group">
 <h2>Averaging over the group<a class="headerlink" href="#Averaging-over-the-group" title="Permalink to this headline">¶</a></h2>
 <p>The averaging is done by projecting our matrix onto the commutant of the group’s natural representation</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -513,6 +508,15 @@ generator(1 or &#39;x1&#39;): [2, 1, 4, 5, 3]
 <span class="n">com</span> <span class="p">=</span> <span class="n">rep</span><span class="p">.</span><span class="n">commutant</span><span class="p">;</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: &#39;group&#39; undefined near line 1, column 1
+error: &#39;rep&#39; undefined near line 1, column 1
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -528,14 +532,7 @@ generator(1 or &#39;x1&#39;): [2, 1, 4, 5, 3]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-MP =
-
-   0.6711   0.1639   0.4528   0.4528   0.4528
-   0.1639   0.6711   0.4528   0.4528   0.4528
-   0.7307   0.7307   0.5380   0.3321   0.2603
-   0.7307   0.7307   0.2603   0.5380   0.3321
-   0.7307   0.7307   0.3321   0.2603   0.5380
-
+error: &#39;com&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>We can check that the matrix is now invariant over permutation by the group elements</p>
@@ -554,18 +551,8 @@ MP =
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-el =
-
-   1   2   3   4   5
-
-ans =
-
-   0.6711   0.1639   0.4528   0.4528   0.4528
-   0.1639   0.6711   0.4528   0.4528   0.4528
-   0.7307   0.7307   0.5380   0.3321   0.2603
-   0.7307   0.7307   0.2603   0.5380   0.3321
-   0.7307   0.7307   0.3321   0.2603   0.5380
-
+error: &#39;group&#39; undefined near line 1, column 1
+error: &#39;el&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 </section>

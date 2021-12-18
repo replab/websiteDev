@@ -439,7 +439,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-replab_init: Initialization done.
+error: &#39;replab_init&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 </section>
@@ -470,13 +470,7 @@ replab_init: Initialization done.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-S7 =
-
-Symmetric group acting on 7 elements
-            identity: [1, 2, 3, 4, 5, 6, 7]
-generator(1 or &#39;x1&#39;): [2, 3, 4, 5, 6, 7, 1]
-generator(2 or &#39;x2&#39;): [2, 1, 3, 4, 5, 6, 7]
-
+error: &#39;replab&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>and then asking for its stabilization over the vector</p>
@@ -494,14 +488,7 @@ generator(2 or &#39;x2&#39;): [2, 1, 3, 4, 5, 6, 7]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Gv =
-
-Permutation group acting on 7 elements of order 4
-            identity: [1, 2, 3, 4, 5, 6, 7]
-generator(1 or &#39;x1&#39;): [3, 2, 1, 4, 5, 6, 7]
-generator(2 or &#39;x2&#39;): [1, 5, 3, 4, 2, 6, 7]
-    recognize.source: Klein four-group &lt; a, x | a^2 = x^2 = x a x^-1 a^-1 = 1 &gt;
-
+error: &#39;S7&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>This group G1 contains all 4 permutations which leave the vector v invariant:</p>
@@ -519,26 +506,7 @@ generator(2 or &#39;x2&#39;): [1, 5, 3, 4, 2, 6, 7]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans =
-{
-  [1,1] =
-
-     1   2   3   4   5   6   7
-
-  [1,2] =
-
-     1   5   3   4   2   6   7
-
-  [1,3] =
-
-     3   2   1   4   5   6   7
-
-  [1,4] =
-
-     3   5   1   4   2   6   7
-
-}
-
+error: &#39;Gv&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 </section>
@@ -559,14 +527,7 @@ ans =
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-G1 =
-
-Permutation group acting on 7 elements of order 6
-            identity: [1, 2, 3, 4, 5, 6, 7]
-generator(1 or &#39;x1&#39;): [2, 1, 3, 4, 5, 6, 7]
-generator(2 or &#39;x2&#39;): [2, 3, 1, 4, 5, 6, 7]
-    recognize.source: Dihedral group of order 6
-
+error: &#39;replab&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>and then stabilize this group over the vector</p>
@@ -584,13 +545,7 @@ generator(2 or &#39;x2&#39;): [2, 3, 1, 4, 5, 6, 7]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-G1v =
-
-Permutation group acting on 7 elements of order 2
-            identity: [1, 2, 3, 4, 5, 6, 7]
-generator(1 or &#39;x1&#39;): [3, 2, 1, 4, 5, 6, 7]
-    recognize.source: Cyclic group C(2) of order 2 &lt; x | x^2 = 1 &gt;
-
+error: &#39;G1&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>This group only contains the two permutations of Gv which also belong to G1:</p>
@@ -608,18 +563,7 @@ generator(1 or &#39;x1&#39;): [3, 2, 1, 4, 5, 6, 7]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans =
-{
-  [1,1] =
-
-     1   2   3   4   5   6   7
-
-  [1,2] =
-
-     3   2   1   4   5   6   7
-
-}
-
+error: &#39;G1v&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 </section>

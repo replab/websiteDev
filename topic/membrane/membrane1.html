@@ -429,7 +429,7 @@ chapter of <a class="reference external" href="https://www.springer.com/gp/book/
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-replab_init: Initialization done.
+error: &#39;replab_init&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 </section>
@@ -501,12 +501,12 @@ oscillation states and the eigenspaces of our problem expressed in the new basis
 <li><p>About the diagonal red line, which will be denoted by <span class="math notranslate nohighlight">\(\sigma\)</span>, and</p></li>
 <li><p>About a vertical grey line <span class="math notranslate nohighlight">\(\tau\)</span> joining the midpoints of two opposite sides.</p></li>
 </ul>
-<center><p><img alt="bf24ed9835c1425c807756886f2140b1" src="../../_images/Square.png" /></p>
+<center><p><img alt="fd3ff6cc0f4e4cd48bd75e92378ef7ea" src="../../_images/Square.png" /></p>
 </center><p>Thereby, we can construct a representation of dimension <span class="math notranslate nohighlight">\(d=9\)</span> of <span class="math notranslate nohighlight">\(D_4\)</span> by regarding the 9 objects to be permuted as the lattice points inside the square region, while we transform the square under the action of <span class="math notranslate nohighlight">\(D_4\)</span>.</p>
 <section id="Constructing-D_4-as-a-subgroup-of-S_9">
 <h3>Constructing <span class="math notranslate nohighlight">\(D_4\)</span> as a subgroup of <span class="math notranslate nohighlight">\(S_9\)</span><a class="headerlink" href="#Constructing-D_4-as-a-subgroup-of-S_9" title="Permalink to this headline">¶</a></h3>
 <p>We can ask <em>RepLAB</em> to construct the dihedral group as a subgroup of <span class="math notranslate nohighlight">\(S_9\)</span>; all we have to do is to provide the generators of the subgroup that we wish to generate. Moreover, the reason why we are using the symmetric group <span class="math notranslate nohighlight">\(S_9\)</span> in this example is because we are permuting 9 distinct elements. In <em>RepLAB</em> this construction can be achieved with the simple command:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -514,6 +514,14 @@ oscillation states and the eigenspaces of our problem expressed in the new basis
 <span></span><span class="n">S9</span> <span class="p">=</span> <span class="n">replab</span><span class="p">.</span><span class="n">S</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: &#39;replab&#39; undefined near line 1, column 1
+</pre></div></div>
 </div>
 <p>The generators of the dihedral group can be found be looking at the results of the reflections on the lattice points of the square. Take, for instance, the reflection about the vertical axis defined above. This transformation will map the lattice points of the 2nd column to themselves, while it will interchange the 1st and the 3rd column, leading to a new setting of points. A generator is attributed to this transformation by converting this new setting of lattice points into an array of numbers.
 As a matter of fact, the new point settings can be realized as the images of the initial lattice under the applied transformations.</p>
@@ -543,14 +551,7 @@ As a matter of fact, the new point settings can be realized as the images of the
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-DH =
-
-Permutation group acting on 9 elements of order 8
-            identity: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-generator(1 or &#39;x1&#39;): [9, 6, 3, 8, 5, 2, 7, 4, 1]
-generator(2 or &#39;x2&#39;): [3, 2, 1, 6, 5, 4, 9, 8, 7]
-    recognize.source: Dihedral group of order 8
-
+error: &#39;S9&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>This way we have created an instance of the dihedral group <span class="math notranslate nohighlight">\(D_4\)</span> by associating to every single symmetry of the square a permutation of the 9 lattice points.</p>
@@ -558,7 +559,7 @@ generator(2 or &#39;x2&#39;): [3, 2, 1, 6, 5, 4, 9, 8, 7]
 <section id="The-complete-reducibility-of-the-natural-representation-of-D_4">
 <h3>The complete reducibility of the natural representation of <span class="math notranslate nohighlight">\(D_4\)</span><a class="headerlink" href="#The-complete-reducibility-of-the-natural-representation-of-D_4" title="Permalink to this headline">¶</a></h3>
 <p>We know proceed further and construct the <em>natural representation</em> of the dihedral group with the help of the method <code class="docutils literal notranslate"><span class="pre">naturalRep</span></code> of the class <code class="docutils literal notranslate"><span class="pre">replab.PermutationGroup</span></code>, which provides a representation of a permutation group through permutation matrices.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
@@ -567,8 +568,16 @@ generator(2 or &#39;x2&#39;): [3, 2, 1, 6, 5, 4, 9, 8, 7]
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: &#39;DH&#39; undefined near line 1, column 1
+</pre></div></div>
+</div>
 <p>and ask <em>RepLAB</em> to decompose this representation into its irreducible components:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
@@ -576,6 +585,14 @@ generator(2 or &#39;x2&#39;): [3, 2, 1, 6, 5, 4, 9, 8, 7]
 <span></span><span class="n">natDec</span> <span class="p">=</span> <span class="n">natRep</span><span class="p">.</span><span class="n">decomposition</span><span class="p">.</span><span class="n">nice</span><span class="p">;</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: &#39;natRep&#39; undefined near line 1, column 1
+</pre></div></div>
 </div>
 <p>Notice that we made use of <code class="docutils literal notranslate"><span class="pre">nice</span></code> here to ask <em>RepLAB</em> to return a <a class="reference external" href="https://replab.github.io/replab/api/rep.html#+replab.SubRep.nice">nicer</a> basis with small integer coefficients.</p>
 <div class="nbinput docutils container">
@@ -592,7 +609,7 @@ generator(2 or &#39;x2&#39;): [3, 2, 1, 6, 5, 4, 9, 8, 7]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans = 4
+error: &#39;natDec&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>This shows that the natural representation of the dihedral group has 4 <em>irreducible</em> components.</p>
@@ -623,8 +640,9 @@ V = V_1 \oplus V_2 \oplus \dots \oplus V_N
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans = 2
-ans = 2
+error: &#39;natDec&#39; undefined near line 1, column 1
+error: &#39;Iso4&#39; undefined near line 1, column 1
+error: &#39;Iso4&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>From that we conclude that the decomposed <em>natural representation</em>, when expressed as a direct sum, will have two copies of a 2-dimensional irreducible representation.</p>
@@ -675,33 +693,12 @@ ans = 2
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-natDec =
-
-Real reducible representation
-       dimension: 9
-           field: &#39;R&#39;
-           group: Permutation group acting on 9 elements of order 8
-       isUnitary: false
-          parent: Orthogonal reducible representation
-basis(1,&#39;exact&#39;): [0; 0; 0; 0; 1; 0; 0; 0; 0]
-basis(2,&#39;exact&#39;): [0; 1/4; 0; 1/4; 0; 1/4; 0; 1/4; 0]
-basis(3,&#39;exact&#39;): [1/4; 0; 1/4; 0; 0; 0; 1/4; 0; 1/4]
-basis(4,&#39;exact&#39;): [1/4; 0; -1/4; 0; 0; 0; -1/4; 0; 1/4]
-basis(5,&#39;exact&#39;): [0; 1/4; 0; -1/4; 0; -1/4; 0; 1/4; 0]
-basis(6,&#39;exact&#39;): 9 x 1 replab.cyclotomic
-basis(7,&#39;exact&#39;): 9 x 1 replab.cyclotomic
-basis(8,&#39;exact&#39;): 9 x 1 replab.cyclotomic
-basis(9,&#39;exact&#39;): 9 x 1 replab.cyclotomic
-    component(1): Isotypic component I(3)xR(1) (trivial)
-    component(2): Isotypic component R(1) (nontrivial)
-    component(3): Isotypic component R(1) (nontrivial)
-    component(4): Isotypic component I(2)xR(2) (nontrivial)
-
+error: &#39;natDec&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>Clearly, the first isotypic component contains three copies of the <em>trivial representation</em> denoted by <span class="math notranslate nohighlight">\(R(1)\)</span> in the above; this is encoded in the Kronecker product form <span class="math notranslate nohighlight">\(\mathbb{I}_3 \otimes R(1)\)</span>. The same applies to the 4th component, where we can deduce that it is constituted by two copies of a real, 2-dimensional, representation <span class="math notranslate nohighlight">\(R(2)\)</span> and has the form <span class="math notranslate nohighlight">\(\mathbb{I_2} \otimes R(2)\)</span>. Evidently, these structures are block-diagonal, as can directly be verified.</p>
 <p>The unique feature of <em>RepLAB</em> is that it provides the change of basis matrix that makes the block-diagonal form of the images apparent. In <em>RepLAB</em>, this can be realized by asking for the basis of the decompositition:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
@@ -709,6 +706,14 @@ basis(9,&#39;exact&#39;): 9 x 1 replab.cyclotomic
 <span></span><span class="n">basis</span> <span class="p">=</span> <span class="n">natDec</span><span class="p">.</span><span class="n">basis</span><span class="p">;</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+error: &#39;natDec&#39; undefined near line 1, column 1
+</pre></div></div>
 </div>
 <p>To make this even more clear, we now ask <em>RepLAB</em> for the images of the generators in the natural representation and then we transform them under a similarity transformation induced by the basis matrix:</p>
 <div class="nbinput docutils container">
@@ -727,58 +732,9 @@ basis(9,&#39;exact&#39;): 9 x 1 replab.cyclotomic
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-ans =
-
- Columns 1 through 8:
-
-   1.0000        0        0        0        0        0        0        0
-        0   1.0000        0        0        0        0        0   0.0000
-        0        0   1.0000        0        0   0.0000  -0.0000        0
-        0        0        0   1.0000        0   0.0000  -0.0000        0
-        0        0        0        0  -1.0000        0        0   0.0000
-        0        0        0        0        0  -0.0000   1.0000        0
-        0        0        0        0        0   1.0000   0.0000        0
-        0        0        0        0        0        0        0  -0.0000
-        0  -0.0000        0        0  -0.0000        0        0   1.0000
-
- Column 9:
-
-        0
-  -0.0000
-        0
-        0
-   0.0000
-        0
-        0
-   1.0000
-   0.0000
-
-ans =
-
- Columns 1 through 8:
-
-   1.0000        0        0        0        0        0        0        0
-        0   1.0000        0        0   0.0000        0        0   0.0000
-        0        0   1.0000        0        0   0.0000   0.0000        0
-        0        0        0  -1.0000        0   0.0000   0.0000        0
-        0   0.0000        0        0   1.0000        0        0  -0.0000
-        0        0        0        0        0  -1.0000  -0.0000        0
-        0        0        0        0        0   0.0000   1.0000        0
-        0  -0.0000        0        0  -0.0000        0        0  -1.0000
-        0        0        0        0        0        0        0  -0.0000
-
- Column 9:
-
-        0
-   0.0000
-        0
-        0
-  -0.0000
-        0
-        0
-  -0.0000
-   1.0000
-
+error: &#39;natRep&#39; undefined near line 1, column 1
+error: &#39;basis&#39; undefined near line 1, column 1
+error: &#39;basis&#39; undefined near line 1, column 1
 </pre></div></div>
 </div>
 <p>As expected, this verifies that the images have a block diagonal structure. In what follows, we are considering as our basis the vectors of the column space of the basis matrix, which <em>RepLAB</em> returns after the decomposition. This choice of basis vectors is ideal for the purposes of the block symmetrization, since it manifests the block-diagonal nature of the images.</p>
