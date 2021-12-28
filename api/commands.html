@@ -113,8 +113,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#replab-checkoop">replab_checkoop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#replab-generate">replab_generate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#replab-sphinx">replab_sphinx</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#replab-sphinx-code">replab_sphinx_code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#replab-sphinx-doc">replab_sphinx_doc</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#replab-release">replab_release</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#replab-runtests">replab_runtests</a></li>
 </ul>
@@ -535,55 +533,6 @@ there is no code inventory to build, so this is identical to <code class="docuti
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>logical</p>
-</dd>
-</dl>
-</dd></dl>
-
-</section>
-<section id="replab-sphinx-code">
-<h2>replab_sphinx_code<a class="headerlink" href="#replab-sphinx-code" title="Permalink to this headline">¶</a></h2>
-<dl class="mat function">
-<dt class="sig sig-object mat" id="root.replab_sphinx_code">
-<span class="sig-prename descclassname"><span class="pre">root.</span></span><span class="sig-name descname"><span class="pre">replab_sphinx_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">codeBase</span></em>, <em class="sig-param"><span class="pre">targetFolder</span></em><span class="sig-paren">)</span><a class="headerlink" href="#root.replab_sphinx_code" title="Permalink to this definition">¶</a></dt>
-<dd><p>Preprocesses source code to complement the Sphinx Matlab domain</p>
-<p>Preprocesses the source code to complement the
-<a class="reference external" href="https://github.com/sphinx-contrib/matlabdomain">Sphinx Matlab domain</a> job.
-It generates a table of contents for all source code files, generates method and
-property occurences for inherited members, shifts the documentation of properties to
-be explicit (to support multiline documentation and types).</p>
-<p>This function erases any file in <code class="docutils literal notranslate"><span class="pre">targetFolder</span></code>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>codeBase</strong> (<code class="xref mat mat-obj docutils literal notranslate"><span class="pre">replab.infra.codeBase</span></code>) – Source code to be processed</p></li>
-<li><p><strong>targetFolder</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">charstring</span></code></span>) – Location for the processed code</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-</section>
-<section id="replab-sphinx-doc">
-<h2>replab_sphinx_doc<a class="headerlink" href="#replab-sphinx-doc" title="Permalink to this headline">¶</a></h2>
-<dl class="mat function">
-<dt class="sig sig-object mat" id="root.replab_sphinx_doc">
-<span class="sig-prename descclassname"><span class="pre">root.</span></span><span class="sig-name descname"><span class="pre">replab_sphinx_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sphinxFolder</span></em>, <em class="sig-param"><span class="pre">targetFolder</span></em>, <em class="sig-param"><span class="pre">webBaseAddress</span></em>, <em class="sig-param"><span class="pre">preferredInvFile</span></em><span class="sig-paren">)</span><a class="headerlink" href="#root.replab_sphinx_doc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Preprocesses the Sphinx documentation folder</p>
-<p>Makes a clean copy of the Sphinx doc folder into the target folder and
-updates all links in the matlab jupyter files according to the API
-described in the file <code class="docutils literal notranslate"><span class="pre">objects.inv</span></code>. In case no such file is present,
-the inventory is downloaded from the web API.</p>
-<p>This function erases any file in <code class="docutils literal notranslate"><span class="pre">targetFolder</span></code>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sphinxFolder</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">charstring</span></code></span>) – Location of the initial Sphinx folder</p></li>
-<li><p><strong>targetFolder</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">charstring</span></code></span>) – Where to store the modified Sphinx folder</p></li>
-<li><p><strong>webBaseAddress</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">charstring</span></code></span>) – base address of the API website, should
-contain the file <code class="docutils literal notranslate"><span class="pre">objects.inv</span></code></p></li>
-<li><p><strong>preferredInvFile</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">optional,</span> <span class="pre">charstring</span></code></span>) – location of the inventory file
-to be used instead of the online one (if applicable)</p></li>
-</ul>
 </dd>
 </dl>
 </dd></dl>
