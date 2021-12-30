@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Sphinx Doc for replab-develop
+name: Sphinx Doc for replab-updateDoc
 
 # Controls when the action will run. 
 on: [workflow_dispatch]
@@ -18,8 +18,8 @@ jobs:
       - name: Check out replab-develop repository
         uses: actions/checkout@v2
         with:
-          repository: replab/replab
-          ref: develop
+          repository: replab/book
+          ref: main
           submodules: recursive
       - name: Check out doc repository
         uses: actions/checkout@v2
@@ -33,7 +33,7 @@ jobs:
         run: echo "::set-output name=sha::$(git rev-parse HEAD)"
       - name: Calling docker launch action
         id: dock
-        uses: replab/websiteDev/.github/actions/sphinx@main
+        uses: replab/websiteDev/.github/actions/sphinx-bash@main
         with:
           commit: ${{ steps.vars.outputs.sha }}
       - name: Commit files
