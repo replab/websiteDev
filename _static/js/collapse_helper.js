@@ -19,7 +19,7 @@ var processAnchors = () => {
     }
 };
 
-val watchAnchorClicks = () => {
+var watchAnchorClicks = () => {
     $(document).ready(function() {
 	$('a').click(function(){
 	    target = $( this ).attr('href');
@@ -34,10 +34,10 @@ val watchAnchorClicks = () => {
 		    if (admonition.classList.contains("toggle-hidden")) {
 			admonition.classList.remove("toggle-hidden");
 		    }
+		    buttons = $(admonition).children(".toggle-button");
+		    if (buttons.length == 1 && buttons[0].classList.contains("toggle-button-hidden"))
+			buttons[0].classList.remove("toggle-button-hidden")
 		}
-		buttons = $(admonition).children(".toggle-button");
-		if (buttons.length == 1 && buttons[0].classList.contains("toggle-button-hidden"))
-		    buttons[0].classList.remove("toggle-button-hidden")
 	    }
 	});
     });

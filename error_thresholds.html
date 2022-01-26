@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
@@ -14,13 +15,12 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Search &#8212; RepLAB Applications</title>
+    <title>Error thresholds in RepLAB &#8212; RepLAB Applications</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/guzzle.css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
-    
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -28,16 +28,13 @@
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "document", "processHtmlClass": "math|output_area"}}</script>
     <script src="_static/js/collapse_helper.js"></script>
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
-  <script src="searchindex.js" defer></script>
-  
+    <link rel="search" title="Search" href="search.html" />
   
    
-
 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -47,7 +44,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="nav-item nav-item-0"><a href="index.html">RepLAB Applications</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Search</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Error thresholds in RepLAB</a></li> 
       </ul>
     </div>
     <div class="container-wrapper">
@@ -89,43 +86,30 @@
   <ol class="breadcrumb">
     <li><a href="index.html">Applis</a></li>
     
-    <li>Search</li>
+    <li>Error thresholds in RepLAB</li>
   </ol>
 </div>
 
           <div class="document clearer body">
             
-  <h1 id="search-documentation">Search</h1>
-  <div id="fallback" class="admonition warning">
-  <script type="text/javascript">$('#fallback').hide();</script>
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
-  </div>
-  <p>
-    From here you can search these documents. Enter your search
-    words into the box below and click "search". Note that the search
-    function will automatically search for all of the words. Pages
-    containing fewer words won't appear in the result list.
-  </p>
+  <section id="error-thresholds-in-replab">
+<h1>Error thresholds in RepLAB<a class="headerlink" href="#error-thresholds-in-replab" title="Permalink to this headline">¶</a></h1>
+<p>We list here the uses of tolerances in RepLAB.</p>
+<section id="detection-of-real-representation-type">
+<h2>Detection of real representation type<a class="headerlink" href="#detection-of-real-representation-type" title="Permalink to this headline">¶</a></h2>
+<p>In: <code class="xref mat mat-obj docutils literal notranslate"><span class="pre">replab.irreducible.computeRealType</span></code></p>
+<p>To detect the real representation type, we take implicitly a Hermitian sample from the commutant of the complexification of the real representation. In practice, we sample a generic, non-symmetric sample from the commutant of the real representation, split it into symmetric and antisymmetric parts, and construct a complex Hermitian matrix <span class="math notranslate nohighlight">\(C\)</span> from those parts.</p>
+<p>We then sample a normally distributed complex vector <span class="math notranslate nohighlight">\(\vec{v}\)</span> and compute the rank of the span of <span class="math notranslate nohighlight">\(\{ \vec{v}, C \vec{v}, C^2 \vec{v} \}\)</span> (we use three vectors as a safety mechanism: the rank should always be one or two). The rank check uses the <code class="docutils literal notranslate"><span class="pre">rank</span></code> Matlab function, with a tolerance we prescribe (<code class="docutils literal notranslate"><span class="pre">doubleEigTol</span></code>).</p>
+<p>However, we’d like to use a better bound here.</p>
+<p>Suggested steps:</p>
+<ul class="simple">
+<li><p>Can we replace the <code class="docutils literal notranslate"><span class="pre">rank</span></code> check with Gram-Schmidt elimination? It’s then easier to understand the meaning of the tolerance parameter.</p></li>
+<li><p>The distribution of the noise due to numerical error when the rank is one is probably difficult to estimate, as it depends on the quality of the basis of the subrepresentation, and we do not know yet how to quantify that part.</p></li>
+<li><p>The distribution of the residual norm when the rank if two is probably easier to compute.</p></li>
+</ul>
+</section>
+</section>
 
-  <div class="search-page-form">
-    <form class="form-inline" action="#" method="GET" role="form">
-      <div class="input-group">
-        <input name="q" type="text" class="form-control" />
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">search</button>
-        </span>
-      </div>
-      <span id="search-progress" style="padding-left: 10px"></span>
-    </form>
-  </div>
-
-  
-  <div id="search-results">
-  
-  </div>
 
           </div>
 
@@ -139,7 +123,7 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="nav-item nav-item-0"><a href="index.html">RepLAB Applications</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Search</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Error thresholds in RepLAB</a></li> 
       </ul>
     </div>
 <script type="text/javascript">
