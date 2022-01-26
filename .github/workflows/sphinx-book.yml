@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Sphinx Doc for replab-updateDoc
+name: Sphinx Doc for replab-book
 
 # Controls when the action will run. 
 on: [workflow_dispatch]
