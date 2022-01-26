@@ -18,7 +18,7 @@ jobs:
       - name: Check out replab-web repository
         uses: actions/checkout@v2
         with:
-          repository: replab/apps
+          repository: replab/applis
           ref: main
           submodules: recursive
       - name: Check out doc repository
