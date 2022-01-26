@@ -16,8 +16,8 @@ ls -al docs
 pip3 install -r sphinx/requirements.txt
 
 # prepare commands
-export ADDPATH_COMMAND="replab_init('verbose', 2);"
-GENERATE_COMMAND="exit(~replab_sphinx('doublePass'));";
+export ADDPATH_COMMAND="run external/replab/replab_init;"
+GENERATE_COMMAND="exit(~build);";
 echo "GENERATE_COMMAND=$GENERATE_COMMAND";
 
 # Check what octave packages we have installed
